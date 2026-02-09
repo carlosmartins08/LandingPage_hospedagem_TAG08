@@ -104,7 +104,7 @@ export default async function LocaleLayout(props: {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </head>
-            <body className="bg-white text-slate-900 antialiased font-sans">
+            <body className="bg-brand-black text-white antialiased font-sans">
                 <Providers initialLanguage={lang as Language}>
                     <CustomCursor />
                     <a

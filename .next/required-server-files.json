@@ -105,7 +105,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\leobe\\Documents\\Aplicacao_vibe code_CarlosHenrique\\LandingPage_plano-base-_TAG08",
+    "outputFileTracingRoot": "C:\\Users\\leobe",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -298,12 +298,12 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "C:\\Users\\leobe\\Documents\\Aplicacao_vibe code_CarlosHenrique\\LandingPage_plano-base-_TAG08"
+      "root": "C:\\Users\\leobe"
     },
     "distDirRoot": ".next"
   },
   "appDir": "C:\\Users\\leobe\\Documents\\Aplicacao_vibe code_CarlosHenrique\\LandingPage_plano-base-_TAG08",
-  "relativeAppDir": "",
+  "relativeAppDir": "Documents\\Aplicacao_vibe code_CarlosHenrique\\LandingPage_plano-base-_TAG08",
   "files": [
     ".next\\routes-manifest.json",
     ".next\\server\\pages-manifest.json",
