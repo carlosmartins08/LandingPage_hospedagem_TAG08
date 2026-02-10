@@ -104,10 +104,17 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                   <span className="block text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] mb-2 font-mono">Escritório</span>
-                  <address className="not-italic text-white font-bold leading-relaxed text-sm">
-                    R. Cassimiro de Abreu, Nº60<br />
-                    Sala 05 - Brisamar<br />
-                    João Pessoa - PB, 58033-330
+                  <address className="not-italic">
+                    <a
+                      href="https://www.google.com/search?q=TAG08+-+Marketing+e+Consultoria"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white font-bold leading-relaxed text-sm hover:text-brand-lime transition-colors"
+                    >
+                      R. Cassimiro de Abreu, Nº60<br />
+                      Sala 05 - Brisamar<br />
+                      João Pessoa - PB, 58033-330
+                    </a>
                   </address>
                 </div>
               </div>

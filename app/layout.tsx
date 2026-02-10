@@ -3,6 +3,7 @@ import { Darker_Grotesque, Manrope } from 'next/font/google';
 import './globals.css';
 import { Providers } from './providers';
 import CustomCursor from '../components/CustomCursor';
+import StructuredData from '../components/StructuredData';
 
 const darkerGrotesque = Darker_Grotesque({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt" className={`${manrope.variable} ${darkerGrotesque.variable} scroll-smooth`}>
       <body className="bg-brand-black text-white antialiased font-sans">
         <Providers>
+          <StructuredData />
           <CustomCursor />
           <a
             href="#main-content"
