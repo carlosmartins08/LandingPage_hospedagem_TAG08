@@ -18,7 +18,7 @@ const PrivacyModal: React.FC = () => {
         document.body.style.overflow = 'unset';
       };
     }
-  }, [isPrivacyModalOpen]);
+  }, [isPrivacyModalOpen, setPrivacyModalOpen]);
 
   if (!isPrivacyModalOpen) return null;
 

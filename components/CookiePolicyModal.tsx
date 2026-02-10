@@ -18,7 +18,7 @@ const CookiePolicyModal: React.FC = () => {
         document.body.style.overflow = 'unset';
       };
     }
-  }, [isCookieModalOpen]);
+  }, [isCookieModalOpen, setCookieModalOpen]);
 
   if (!isCookieModalOpen) return null;
 

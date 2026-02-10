@@ -74,7 +74,7 @@ const Testimonials: React.FC = () => {
                             </div>
 
                             <p className="text-slate-300 font-medium leading-relaxed mb-8 relative z-10">
-                                "{testimonial.content}"
+                                &ldquo;{testimonial.content}&rdquo;
                             </p>
 
                             <div className="flex items-center justify-between mt-auto border-t border-white/5 pt-6">

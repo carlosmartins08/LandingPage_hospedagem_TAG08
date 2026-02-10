@@ -33,7 +33,7 @@ const OpportunityCalculator: React.FC = () => {
     }, 16);
 
     return () => clearInterval(timer);
-  }, [annualLoss]);
+  }, [annualLoss, revenue, targetGrowth, updateROI]);
 
   const trackCalculator = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
