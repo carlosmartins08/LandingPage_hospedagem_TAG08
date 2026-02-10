@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Plus, Minus, MessageCircle, HelpCircle, ArrowRight } from 'lucide-react';
-import { useTranslation } from './LanguageContext';
+import { useTranslation } from '../contexts/LanguageContext';
 
 const FAQ: React.FC = () => {
   const { t } = useTranslation();
@@ -148,3 +148,4 @@ const FAQ: React.FC = () => {
 };
 
 export default FAQ;
+

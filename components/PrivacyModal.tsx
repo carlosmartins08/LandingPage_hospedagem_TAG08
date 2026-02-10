@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { useTranslation } from './LanguageContext';
+import { useTranslation } from '../contexts/LanguageContext';
 
 const PrivacyModal: React.FC = () => {
   const { t, isPrivacyModalOpen, setPrivacyModalOpen } = useTranslation();

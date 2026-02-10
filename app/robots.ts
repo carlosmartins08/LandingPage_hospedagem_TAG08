@@ -1,16 +1,12 @@
 import { SITE_CONFIG } from '../constants';
+import type { MetadataRoute } from 'next';
 
-const robotsConfig = {
-  rules: [
-    {
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/_next/', '/api/'],
     },
-  ],
-  sitemap: `${SITE_CONFIG.domain}/sitemap.xml`,
-};
-
-export default function robots() {
-  return robotsConfig;
+    sitemap: `${SITE_CONFIG.domain}/sitemap.xml`,
+  };
 }

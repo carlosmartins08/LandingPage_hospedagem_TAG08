@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { useTranslation } from './LanguageContext';
-import { useUX } from './UXContext';
+import { useTranslation } from '../contexts/LanguageContext';
+import { useUX } from '../contexts/UXContext';
 import Magnetic from './Magnetic';
 
 const Hero: React.FC = () => {
@@ -111,3 +111,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+

@@ -1,11 +1,1 @@
-{
-  "app": {
-    "[project]/Documents/Aplicacao_vibe code_CarlosHenrique/LandingPage_plano-base-_TAG08/app/[lang]/page": [
-      "static/media/567cf56dd3e45733-s.p.16dec741.woff2",
-      "static/media/a343f882a40d2cc9-s.p.71e1367e.woff2"
-    ]
-  },
-  "appUsingSizeAdjust": true,
-  "pages": {},
-  "pagesUsingSizeAdjust": false
-}
+{"pages":{},"app":{},"appUsingSizeAdjust":false,"pagesUsingSizeAdjust":false}

@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\n  \"app\": {\n    \"[project]/Documents/Aplicacao_vibe code_CarlosHenrique/LandingPage_plano-base-_TAG08/app/[lang]/page\": [\n      \"static/media/567cf56dd3e45733-s.p.16dec741.woff2\",\n      \"static/media/a343f882a40d2cc9-s.p.71e1367e.woff2\"\n    ]\n  },\n  \"appUsingSizeAdjust\": true,\n  \"pages\": {},\n  \"pagesUsingSizeAdjust\": false\n}"
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{},\"appUsingSizeAdjust\":false,\"pagesUsingSizeAdjust\":false}"

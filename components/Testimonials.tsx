@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from './LanguageContext';
+import { useTranslation } from '../contexts/LanguageContext';
 import { Star, ArrowUpRight, MessageSquare, Quote } from 'lucide-react';
 
 const Testimonials: React.FC = () => {
@@ -114,3 +114,4 @@ const Testimonials: React.FC = () => {
 };
 
 export default Testimonials;
+

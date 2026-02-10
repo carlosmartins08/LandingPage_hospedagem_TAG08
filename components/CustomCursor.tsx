@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useUX } from './UXContext';
+import { useUX } from '../contexts/UXContext';
 
 const CustomCursor: React.FC = () => {
     const { strategyNote } = useUX();
@@ -85,3 +85,4 @@ const CustomCursor: React.FC = () => {
 };
 
 export default CustomCursor;
+

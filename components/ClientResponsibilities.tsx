@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from './LanguageContext';
+import { useTranslation } from '../contexts/LanguageContext';
 import { Handshake, CheckCircle2, MessageSquare, Target, Zap } from 'lucide-react';
 
 const ClientResponsibilities: React.FC = () => {
@@ -61,3 +61,4 @@ const ClientResponsibilities: React.FC = () => {
 };
 
 export default ClientResponsibilities;
+

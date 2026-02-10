@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useTranslation, CookieConsent } from './LanguageContext';
+import { useTranslation, CookieConsent } from '../contexts/LanguageContext';
 
 const CookieBanner: React.FC = () => {
   const { t, setCookieModalOpen, cookieConsent, updateCookieConsent } = useTranslation();
@@ -148,3 +148,4 @@ const CookieBanner: React.FC = () => {
 };
 
 export default CookieBanner;
+

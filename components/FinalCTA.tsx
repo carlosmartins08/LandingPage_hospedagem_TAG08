@@ -1,7 +1,7 @@
 'use client';
 
-import { useTranslation } from './LanguageContext';
-import { useUX } from './UXContext';
+import { useTranslation } from '../contexts/LanguageContext';
+import { useUX } from '../contexts/UXContext';
 import { ArrowRight } from 'lucide-react';
 import Magnetic from './Magnetic';
 
@@ -71,3 +71,4 @@ const FinalCTA: React.FC = () => {
 };
 
 export default FinalCTA;
+

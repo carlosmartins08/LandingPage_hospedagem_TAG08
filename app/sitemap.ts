@@ -1,14 +1,13 @@
 import { SITE_CONFIG } from '../constants';
+import type { MetadataRoute } from 'next';
 
-export default function sitemap() {
-  const routes = SITE_CONFIG.locales.flatMap((locale) => [
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
     {
-      url: `${SITE_CONFIG.domain}/${locale}`,
+      url: SITE_CONFIG.domain,
       lastModified: new Date(),
-      changefreq: 'monthly',
+      changeFrequency: 'monthly',
       priority: 1,
-    }
-  ]);
-
-  return routes;
+    },
+  ];
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from './LanguageContext';
+import { useTranslation } from '../contexts/LanguageContext';
 import { ShieldCheck, Target, Users, Zap, CheckCircle2 } from 'lucide-react';
 
 const StrategicBenefits: React.FC = () => {
@@ -96,3 +96,4 @@ const StrategicBenefits: React.FC = () => {
 };
 
 export default StrategicBenefits;
+

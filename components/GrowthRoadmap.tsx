@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from './LanguageContext';
-import { useUX } from './UXContext';
+import { useTranslation } from '../contexts/LanguageContext';
+import { useUX } from '../contexts/UXContext';
 import { TrendingUp, Layers, Rocket, Trophy } from 'lucide-react';
 
 const GrowthRoadmap: React.FC = () => {
@@ -91,3 +91,4 @@ const GrowthRoadmap: React.FC = () => {
 };
 
 export default GrowthRoadmap;
+

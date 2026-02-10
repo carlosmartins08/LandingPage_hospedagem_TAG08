@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from './LanguageContext';
-import { useUX } from './UXContext';
+import { useTranslation } from '../contexts/LanguageContext';
+import { useUX } from '../contexts/UXContext';
 import { DollarSign, TrendingUp, ArrowRight, Info } from 'lucide-react';
 
 const OpportunityCalculator: React.FC = () => {
@@ -186,3 +186,4 @@ const OpportunityCalculator: React.FC = () => {
 };
 
 export default OpportunityCalculator;
+

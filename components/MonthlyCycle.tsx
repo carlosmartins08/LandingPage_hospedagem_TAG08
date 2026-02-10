@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from './LanguageContext';
+import { useTranslation } from '../contexts/LanguageContext';
 import { Calendar, PenTool, Rocket, BarChart3 } from 'lucide-react';
 
 const MonthlyCycle: React.FC = () => {
@@ -102,3 +102,4 @@ const MonthlyCycle: React.FC = () => {
 };
 
 export default MonthlyCycle;
+

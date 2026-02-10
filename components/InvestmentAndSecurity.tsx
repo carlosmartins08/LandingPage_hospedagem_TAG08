@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from './LanguageContext';
+import { useTranslation } from '../contexts/LanguageContext';
 import { Shield, Sparkles, Calendar, ArrowRight, Lock } from 'lucide-react';
 
 const InvestmentAndSecurity: React.FC = () => {
@@ -104,3 +104,4 @@ const InvestmentAndSecurity: React.FC = () => {
 };
 
 export default InvestmentAndSecurity;
+

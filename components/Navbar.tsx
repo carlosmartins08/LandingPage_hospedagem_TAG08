@@ -3,8 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Icons } from '../constants';
-import { useTranslation } from './LanguageContext';
-import { useUX } from './UXContext';
+import { useTranslation } from '../contexts/LanguageContext';
+import { useUX } from '../contexts/UXContext';
 import Magnetic from './Magnetic';
 
 const Navbar: React.FC = () => {

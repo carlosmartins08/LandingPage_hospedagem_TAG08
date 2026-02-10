@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from './LanguageContext';
-import { useUX } from './UXContext';
+import { useTranslation } from '../contexts/LanguageContext';
+import { useUX } from '../contexts/UXContext';
 import { AlertTriangle, TrendingDown, DollarSign, EyeOff } from 'lucide-react';
 import { Icons } from '../constants';
 

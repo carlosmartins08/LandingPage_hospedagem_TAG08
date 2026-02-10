@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from './LanguageContext';
+import { useTranslation } from '../contexts/LanguageContext';
 import { Target, BarChart, Rocket, CheckCircle2 } from 'lucide-react';
 
 const ValueProposition: React.FC = () => {
@@ -65,3 +65,4 @@ const ValueProposition: React.FC = () => {
 };
 
 export default ValueProposition;
+

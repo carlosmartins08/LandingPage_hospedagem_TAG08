@@ -1,22 +1,15 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useTranslation } from './LanguageContext';
+import { useTranslation } from '../contexts/LanguageContext';
 import { Language } from '../types';
-import { useRouter, usePathname } from 'next/navigation';
 
 const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
-  const router = useRouter();
-  const pathname = usePathname();
-
   const handleLanguageChange = (newLang: Language) => {
-    const segments = pathname.split('/');
-    segments[1] = newLang; // Assuming [lang] is the first segment
-    const newPathname = segments.join('/');
-    router.push(newPathname);
+    setLanguage(newLang);
     setIsOpen(false);
   };
 
@@ -75,3 +68,4 @@ const LanguageSwitcher: React.FC = () => {
 };
 
 export default LanguageSwitcher;
+

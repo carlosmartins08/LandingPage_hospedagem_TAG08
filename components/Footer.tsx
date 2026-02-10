@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from './LanguageContext';
-import { useUX } from './UXContext';
+import { useTranslation } from '../contexts/LanguageContext';
+import { useUX } from '../contexts/UXContext';
 import Button from './Button';
 import BrandLogo from './BrandLogo';
 import {
@@ -228,3 +228,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+

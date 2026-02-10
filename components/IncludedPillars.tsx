@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useTranslation } from './LanguageContext';
-import { useUX } from './UXContext';
+import { useTranslation } from '../contexts/LanguageContext';
+import { useUX } from '../contexts/UXContext';
 import { Icons } from '../constants';
 
 const IncludedPillars: React.FC = () => {
