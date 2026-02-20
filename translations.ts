@@ -38,20 +38,20 @@ export const translations: Record<Language, TranslationSchema> = {
       }
     },
     problem: {
-      label: "O Cenário Atual",
-      title: "Sua empresa está estagnada no \"quase\"?",
-      description: "O marketing amador é o maior dreno de caixa da sua empresa. Sem uma gestão de estúdio, você está apenas queimando recursos sem construir patrimônio digital.",
+      label: "Diagnóstico de Estagnação",
+      title: "Sua marca está presa no teto da infraestrutura amadora?",
+      description: "Muitas empresas tentam se comunicar, mas falham por falta de um método de estúdio. O marketing sem estrutura não é apenas ineficiente; é um dreno silencioso que impede o seu faturamento de atingir o próximo nível de maturidade.",
       items: [
-        "Falta de constância na comunicação",
-        "Tráfego pago sem estratégia de conversão",
-        "Incerteza sobre o retorno do investimento",
-        "Sobrecarga operacional do sócio"
+        "Inconsistência crônica na comunicação",
+        "Tráfego pago sem funil de conversão",
+        "Decisões baseadas em 'achismos' visuais",
+        "Esforço operacional que não se paga"
       ],
       cards: {
-        posts: "Postagens Irregulares",
-        leads: "Leads Desqualificados",
-        money: "Dinheiro Perdido",
-        brand: "Marca Invisível",
+        posts: "Falta de Método",
+        leads: "Leads de Baixa Qualidade",
+        money: "Dreno de Recursos",
+        brand: "Autoridade Estagnada",
       }
     },
     pillars: {
@@ -221,12 +221,12 @@ export const translations: Record<Language, TranslationSchema> = {
       }
     },
     strategyNotes: {
-      hero: "Engenharia visual focada em reduzir o esforço cognitivo.",
-      metrics: "Otimização baseada em heurísticas de usabilidade sênior.",
-      roadmap: "Visão 360 do LTV para máxima previsibilidade.",
-      roi: "Previsão de perda anual por estagnação digital.",
-      design: "Grid de elite para harmonia visual absoluta.",
-      blueprint: "Blueprint Mode: Visualizando as camadas estratégicas."
+      hero: "Engenharia visual focada em reduzir esforço cognitivo do lead ideal.",
+      metrics: "Otimização baseada em heurísticas de usabilidade e conversão real.",
+      roadmap: "Filtro de LTV 360: Atraindo quem investe e repelindo quem gasta.",
+      roi: "Identificação de falhas estruturais causadas por marketing amador.",
+      design: "Grid de elite: A estética como primeira barreira de autoridade.",
+      blueprint: "Strategic Transparency: Mostrando as camadas invisíveis do método."
     }
   },
   en: {
