@@ -47,6 +47,7 @@ export const UXProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         if (utmCampaign?.includes('imobi') || utmCampaign?.includes('realestate')) setNiche('real-estate');
         else if (utmCampaign?.includes('saude') || utmCampaign?.includes('health')) setNiche('health');
         else if (utmCampaign?.includes('tech') || utmCampaign?.includes('startup')) setNiche('tech');
+        else if (utmCampaign?.includes('expert') || utmCampaign?.includes('mentor') || utmCampaign?.includes('consultor')) setNiche('expert');
 
         if (utmSource?.includes('google')) setSource('google');
         else if (utmSource?.includes('facebook') || utmSource?.includes('instagram') || utmSource?.includes('meta')) setSource('meta');

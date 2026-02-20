@@ -7,13 +7,14 @@ export const translations: Record<Language, TranslationSchema> = {
       'real-estate': "Domine o mercado imobiliário.",
       'health': "Autoridade máxima em saúde.",
       'tech': "Escalabilidade digital de elite.",
+      'expert': "Sua autoridade merece uma vitrine de elite.",
       'generic': "Venda mais. Sem achismos."
     },
     hero: {
       badge: "Plano Base Studio",
       title: "Venda mais.",
       titleAccent: "Apareça melhor.",
-      description: "Transformamos empresas estagnadas em marcas dominantes através de gestão estratégica de marketing e design de elite.",
+      description: "Transformamos empresas estagnadas em marcas dominantes através de gestão estratégica de marketing e design de elite. O fim da tentativa e erro.",
       cta: "Agendar Diagnóstico",
       limited: "Vagas Limitadas",
       welcomeBack: "Bem-vindo de volta",
@@ -38,14 +39,14 @@ export const translations: Record<Language, TranslationSchema> = {
       }
     },
     problem: {
-      label: "Diagnóstico de Estagnação",
-      title: "Sua marca está presa no teto da infraestrutura amadora?",
-      description: "Muitas empresas tentam se comunicar, mas falham por falta de um método de estúdio. O marketing sem estrutura não é apenas ineficiente; é um dreno silencioso que impede o seu faturamento de atingir o próximo nível de maturidade.",
+      label: "Análise de Maturidade Digital",
+      title: "Cansado da falta de estrutura e da tentativa e erro?",
+      description: "O custo da inércia e do marketing amador é o imposto mais caro que sua empresa paga. Se você já tentou freelancers soltos e redes sociais sem plano, sabe que o volume vazio não constrói patrimônio digital.",
       items: [
         "Inconsistência crônica na comunicação",
         "Tráfego pago sem funil de conversão",
-        "Decisões baseadas em 'achismos' visuais",
-        "Esforço operacional que não se paga"
+        "Dependência de soluções superficiais",
+        "Sua imagem não representa seu negócio"
       ],
       cards: {
         posts: "Falta de Método",
@@ -55,8 +56,8 @@ export const translations: Record<Language, TranslationSchema> = {
       }
     },
     pillars: {
-      title: "Gestão de Ativos Digitais",
-      subtitle: "Construímos o patrimônio digital que sua empresa precisa para dominar o nicho.",
+      title: "Construção de Ativos Digitais",
+      subtitle: "Construímos o patrimônio digital que sua empresa precisa para dominar o nicho de forma sustentável.",
       items: {
         strategy: { title: "Direção Estratégica", desc: "Definição de canais, personas e linha editorial focada em ROI real e previsibilidade." },
         content: { title: "Produção de Elite", desc: "Criação de criativos premium que convertem atenção em autoridade e desejo de compra." },
@@ -70,21 +71,21 @@ export const translations: Record<Language, TranslationSchema> = {
       titleAccent: "Frequentes.",
       subtitle: "Transparência radical é um dos nossos pilares. Entenda os detalhes antes de dar o próximo passo.",
       supportTitle: "Ainda com dúvida?",
-      supportBody: "Nossa equipe de consultores está disponível no WhatsApp para responder questões específicas do seu nicho.",
+      supportBody: "Nossa equipe de especialistas está disponível no WhatsApp para responder questões específicas do seu nicho.",
       supportCta: "Falar com Consultor",
       items: [
-        { question: "O Plano Base é indicado para qualquer tipo de empresa?", answer: "Não. O Plano Base é exclusivo para empresas que buscam consistência estratégica e já validaram seu produto/serviço. Não atendemos negócios instáveis ou que buscam apenas postagens avulsas sem compromisso com o processo." },
-        { question: "Vocês garantem retorno imediato ou viralização?", answer: "Não trabalhamos com fórmulas mágicas. Oferecemos um sistema de crescimento sólido e previsível. Resultados reais surgem da disciplina estratégica e do respeito ao ciclo de maturidade do marketing." },
-        { question: "Quem toma as decisões criativas?", answer: "A TAG08 atua como seu departamento de marketing estratégico. Valorizamos sua escuta, mas decisões técnicas são baseadas em dados e heurísticas de conversão. Buscamos parceiros que confiem na nossa direção profissional." },
-        { question: "Esse plano é apenas gestão de redes sociais?", answer: "Não. É uma infraestrutura de marketing. Além das redes, ele integra diagnóstico, inteligência de tráfego e análise de dados para transformar sua presença digital em um canal de faturamento." },
-        { question: "Como funciona a dinâmica de ajustes e retrabalho?", answer: "Trabalhamos com um fluxo organizado de aprovações. O cliente ideal participa ativamente na validação estratégica inicial, o que reduz drasticamente o retrabalho e foca a energia na escala de resultados." },
-        { question: "Existe contrato de fidelidade?", answer: "Não possuímos fidelidade contratual forçada. Nossa retenção é baseada em performance e transparência. Se você acredita que o marketing é um gasto e não um investimento ativo, provavelmente não teremos o alinhamento necessário para a parceria." }
+        { question: "O Plano Base é indicado para qualquer tipo de empresa?", answer: "Não. O Plano Base é exclusivo para empresas que buscam consistência estratégica e já validaram seu produto/serviço. Não atendemos quem busca 'só um post' ou quem não está disposto a seguir um plano estruturado." },
+        { question: "Vocês garantem retorno imediato ou viralização?", answer: "Não trabalhamos com fórmulas mágicas ou busca por viralização vazia. Oferecemos um sistema de crescimento sólido e previsível. Resultados reais surgem da disciplina e do respeito ao processo." },
+        { question: "Quem toma as decisões criativas?", answer: "A TAG08 atua como sua sócia estratégica de marketing. Valorizamos sua escuta, mas decisões técnicas são baseadas em dados e heurísticas de conversão. Buscamos parceiros, não apenas clientes." },
+        { question: "Esse plano é apenas gestão de redes sociais?", answer: "Não. É uma infraestrutura de inteligência. Além das redes, ele integra diagnóstico, tráfego e análise de dados para transformar sua presença digital em um ativo de faturamento." },
+        { question: "Como funciona a dinâmica de ajustes e retrabalho?", answer: "Trabalhamos com um fluxo organizado de validação. O cliente ideal participa ativamente nas definições estratégicas iniciais, o que garante precisão e elimina o retrabalho desnecessário." },
+        { question: "Existe contrato de fidelidade?", answer: "Não possuímos fidelidade forçada. Nossa retenção é baseada em performance e clareza. Se você vê marketing como um custo e não como investimento ativo, provavelmente não teremos o fit necessário." }
       ]
     },
     cta: {
-      title: "Pronto para o próximo nível?",
-      desc: "Clique no botão abaixo para agendar uma reunião de diagnóstico gratuita com nosso time sênior.",
-      button: "Agendar Agora via WhatsApp",
+      title: "Sua marca pronta para o topo?",
+      desc: "A comunicação é o caminho entre onde sua marca está e onde ela deseja chegar. Clique no botão abaixo para agendar um diagnóstico gratuito.",
+      button: "Agendar Diagnóstico via WhatsApp",
       highValueTitle: "Leve sua operação ao topo.",
       highValueButton: "Falar com um Sócio Sênior",
       disclaimer: "* Ao iniciar o contato, você autoriza a TAG08 a tratar seus dados para fins de diagnóstico comercial, conforme a LGPD e nossa política de privacidade.",
@@ -119,12 +120,12 @@ export const translations: Record<Language, TranslationSchema> = {
     },
     monthlyCycle: {
       title: "Ciclo de Execução Recorrente",
-      subtitle: "Marketing não é um evento, é um processo contínuo.",
+      subtitle: "Marketing não é um evento, é um processo contínuo de inteligência.",
       steps: {
         step1: { title: "Semana 1: Alinhamento", desc: "Reunião de kickoff mensal para definir os temas e objetivos estratégicos." },
         step2: { title: "Semana 2: Produção", desc: "Desenvolvimento de artes, legendas e configuração técnica das campanhas." },
-        step3: { title: "Crescimento", desc: "Acompanhamento diário e otimização em tempo real." },
-        step4: { title: "Escala", desc: "Análise de KPIs e expansão agressiva de resultados." },
+        step3: { title: "Crescimento", desc: "Acompanhamento diário e otimização em tempo real baseada em dados reais." },
+        step4: { title: "Escala", desc: "Análise de KPIs e expansão agressiva de resultados e autoridade." },
       },
       footerText: "Repetimos o sucesso todos os meses",
     },
@@ -142,12 +143,12 @@ export const translations: Record<Language, TranslationSchema> = {
     },
     strategicBenefits: {
       title: "O Padrão Studio TAG08",
-      subtitle: "Diferenciais que nos colocam no topo da cadeia do marketing estratégico.",
+      subtitle: "Diferenciais que nos colocam no topo da cadeia do marketing estratégico e inteligente.",
       items: [
-        { title: "Consistência Absoluta", desc: "Presença digital ininterrupta e profissional que constrói autoridade real." },
-        { title: "ROI Focado", desc: "Campanhas otimizadas para gerar lucro e escala, fugindo de métricas de vaidade." },
-        { title: "Time Sênior", desc: "Acesso direto a consultores especialistas, sem intermediários ou estagiários." },
-        { title: "Agilidade", desc: "Execução veloz e adaptação constante às mudanças do mercado digital." }
+        { title: "Inteligência Estratégica", desc: "Não apenas executamos; pensamos o seu negócio com foco em ativos digitais recorrentes." },
+        { title: "Patrimônio de Marca", desc: "Construímos uma autoridade que se valoriza com o tempo, gerando desejo de compra real." },
+        { title: "Time Sênior", desc: "Acesso direto a consultores especialistas. Sem estagiários na linha de frente da sua marca." },
+        { title: "Processos Validados", desc: "Troque o caos pela clareza de um fluxo de trabalho que privilegia a sua produtividade." }
       ]
     },
     calculator: {
@@ -171,7 +172,7 @@ export const translations: Record<Language, TranslationSchema> = {
       cardTitle: "Segurança de Studio",
       fideleityTitle: "Zero Fidelidade",
       fidelityTag: "ELITE",
-      fidelityDesc: "Foque nos resultados. Não prendemos nossos clientes com contratos longos; nossa retenção é baseada em performance real.",
+      fidelityDesc: "Foque nos resultados. Não prendemos nossos parceiros com contratos longos; nossa retenção é baseada em performance real.",
       cancelTitle: "Cancelamento Flexível",
       cancelDesc: "Precisa ajustar o rumo? Basta um aviso prévio de 30 dias. Simplicidade e ética em todas as pontas da nossa operação.",
       offerTitle: "Sua marca,",
@@ -181,21 +182,21 @@ export const translations: Record<Language, TranslationSchema> = {
     },
     responsibilities: {
       badge: "The Partnership",
-      title: "Sua responsabilidade",
-      titleAccent: "no sucesso.",
-      subtitle: "Marketing de elite é uma via de mão dupla. Para alcançarmos o topo, precisamos que sua equipe esteja em sincronia conosco:",
+      title: "Sincronia",
+      titleAccent: "Estratégica.",
+      subtitle: "Marketing de elite é uma via de mão dupla. Para alcançarmos o topo, precisamos que sua equipe esteja em total sincronia conosco:",
       items: [
-        "Agilidade nas aprovações de criativos.",
-        "Sincronia entre marketing e comercial.",
-        "Participação ativa na reunião mensal.",
-        "Feedback constante sobre leads gerados."
+        "Sincronia constante entre marketing e comercial.",
+        "Direção e clareza no compartilhamento da visão.",
+        "Participação ativa na reunião mensal de alinhamento.",
+        "Abertura total para processos e novas estratégias."
       ]
     },
     footer: {
       badge: "Consultoria de Elite",
       title: "Sua empresa pronta para o",
       titleAccent: "próximo nível de maturidade.",
-      description: "A TAG08 une estratégia de negócios, engenharia de processos e tecnologia para transformar o caos operacional em máquinas de crescimento autogerenciáveis.",
+      description: "A TAG08 une estratégia de negócios, engenharia de processos e tecnologia para transformar o caos operacional em máquinas de crescimento.",
       ctaDiagnosis: "AGENDAR DIAGNÓSTICO",
       ctaDirection: "FALAR COM A DIREÇÃO",
       about: "Consultoria especializada em alavancagem de negócios. Substituímos o 'achismo' por dados e o caos por processos validados.",
@@ -234,6 +235,7 @@ export const translations: Record<Language, TranslationSchema> = {
       'real-estate': "Highlight your properties.",
       'health': "Strengthen your clinic.",
       'tech': "Scale your Startup.",
+      'expert': "Your authority deserves an elite showcase.",
       'generic': "Sell more."
     },
     hero: {
@@ -467,6 +469,7 @@ export const translations: Record<Language, TranslationSchema> = {
       'real-estate': "Destaque sus inmuebles.",
       'health': "Fortalezca su clínica.",
       'tech': "Escala tu Startup.",
+      'expert': "Su autoridad merece un escaparate de élite.",
       'generic': "Venda más."
     },
     hero: {
@@ -700,6 +703,7 @@ export const translations: Record<Language, TranslationSchema> = {
       'real-estate': "Mettez en avant vos biens.",
       'health': "Renforcez votre clinique.",
       'tech': "Escalez votre Startup.",
+      'expert': "Votre autorité mérite une vitrine d’élite.",
       'generic': "Vendez plus."
     },
     hero: {

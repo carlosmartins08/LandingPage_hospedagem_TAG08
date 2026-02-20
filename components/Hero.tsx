@@ -38,6 +38,7 @@ const Hero: React.FC = () => {
       'real-estate': "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop", // Modern Building
       'health': "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop", // Modern Clinic
       'tech': "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop", // Team/Laptop
+      'expert': "https://images.unsplash.com/photo-1475721027185-40301d320295?q=80&w=800&auto=format&fit=crop", // Speaker/Authority
       'generic': "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" // Strategy Team (Default)
     };
     return images[niche] || images.generic;

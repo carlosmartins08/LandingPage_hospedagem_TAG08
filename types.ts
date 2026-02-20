@@ -30,7 +30,7 @@ export interface FAQItem {
 }
 
 export type Persona = 'data-focused' | 'vision-focused' | 'neutral';
-export type Niche = 'real-estate' | 'health' | 'tech' | 'generic';
+export type Niche = 'real-estate' | 'health' | 'tech' | 'expert' | 'generic';
 
 export interface TranslationSchema {
   nicheHeadlines: Record<Niche, string>;
