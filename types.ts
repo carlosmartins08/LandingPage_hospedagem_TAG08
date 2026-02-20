@@ -29,7 +29,11 @@ export interface FAQItem {
   answer: string;
 }
 
+export type Persona = 'data-focused' | 'vision-focused' | 'neutral';
+export type Niche = 'real-estate' | 'health' | 'tech' | 'generic';
+
 export interface TranslationSchema {
+  nicheHeadlines: Record<Niche, string>;
   hero: {
     badge: string;
     title: string;

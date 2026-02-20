@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Source = 'google' | 'meta' | 'linkedin' | 'direct';
-export type Persona = 'data-focused' | 'vision-focused' | 'neutral';
+import { Persona, Niche } from '../types';
 
 interface UXContextType {
     source: Source;
@@ -17,6 +17,8 @@ interface UXContextType {
     setStrategyNote: (note: string | null) => void;
     persona: Persona;
     updatePersona: (persona: Persona) => void;
+    niche: Niche;
+    setNiche: (niche: Niche) => void;
     isBlueprintMode: boolean;
     toggleBlueprintMode: () => void;
 }
@@ -32,12 +34,19 @@ export const UXProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     // Innovation States
     const [strategyNote, setStrategyNote] = useState<string | null>(null);
     const [persona, setPersona] = useState<Persona>('neutral');
+    const [niche, setNiche] = useState<Niche>('generic');
     const [isBlueprintMode, setIsBlueprintMode] = useState(false);
 
     useEffect(() => {
         // 1. Detect Source via UTMs
         const params = new URLSearchParams(window.location.search);
         const utmSource = params.get('utm_source')?.toLowerCase();
+        const utmCampaign = params.get('utm_campaign')?.toLowerCase();
+
+        // Niche Detection
+        if (utmCampaign?.includes('imobi') || utmCampaign?.includes('realestate')) setNiche('real-estate');
+        else if (utmCampaign?.includes('saude') || utmCampaign?.includes('health')) setNiche('health');
+        else if (utmCampaign?.includes('tech') || utmCampaign?.includes('startup')) setNiche('tech');
 
         if (utmSource?.includes('google')) setSource('google');
         else if (utmSource?.includes('facebook') || utmSource?.includes('instagram') || utmSource?.includes('meta')) setSource('meta');
@@ -111,6 +120,8 @@ export const UXProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
             setStrategyNote,
             persona,
             updatePersona,
+            niche,
+            setNiche,
             isBlueprintMode,
             toggleBlueprintMode
         }}>

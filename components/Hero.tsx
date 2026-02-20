@@ -7,13 +7,14 @@ import Magnetic from './Magnetic';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
-  const { source, isReturning, setStrategyNote, persona } = useUX();
+  const { source, isReturning, setStrategyNote, persona, niche } = useUX();
 
   const handleCtaClick = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'hero_cta_click', {
         source: source,
-        is_returning: isReturning
+        is_returning: isReturning,
+        niche: niche
       });
     }
   };
@@ -28,6 +29,7 @@ const Hero: React.FC = () => {
   const getHeadline = () => {
     if (persona === 'data-focused') return t.hero.headlines.data;
     if (persona === 'vision-focused') return t.hero.headlines.vision;
+    if (niche !== 'generic') return t.nicheHeadlines[niche];
     return t.hero.title;
   };
 

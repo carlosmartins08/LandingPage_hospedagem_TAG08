@@ -3,6 +3,12 @@ import { Language, TranslationSchema } from './types';
 
 export const translations: Record<Language, TranslationSchema> = {
   pt: {
+    nicheHeadlines: {
+      'real-estate': "Domine o mercado imobiliário.",
+      'health': "Autoridade máxima em saúde.",
+      'tech': "Escalabilidade digital de elite.",
+      'generic': "Venda mais. Sem achismos."
+    },
     hero: {
       badge: "Plano Base Studio",
       title: "Venda mais.",
@@ -49,13 +55,13 @@ export const translations: Record<Language, TranslationSchema> = {
       }
     },
     pillars: {
-      title: "Os 4 Pilares da Entrega",
-      subtitle: "Uma solução completa e integrada para sua consolidação digital.",
+      title: "Gestão de Ativos Digitais",
+      subtitle: "Construímos o patrimônio digital que sua empresa precisa para dominar o nicho.",
       items: {
-        strategy: { title: "Planejamento Estratégico", desc: "Definição de canais, personas, linha editorial e cronograma de ações trimestrais focado em conversão." },
-        content: { title: "Produção de Conteúdo", desc: "Criação de criativos para redes sociais e anúncios, mantendo o padrão visual premium da sua marca." },
-        ads: { title: "Gestão de Tráfego Pago", desc: "Configuração e otimização diária de campanhas em Meta Ads e Google Ads para maximizar o ROI." },
-        analysis: { title: "Análise e Reporting", desc: "Dashboard em tempo real e reuniões mensais de alinhamento com especialistas de marketing." },
+        strategy: { title: "Direção Estratégica", desc: "Definição de canais, personas e linha editorial focada em ROI real e previsibilidade." },
+        content: { title: "Produção de Elite", desc: "Criação de criativos premium que convertem atenção em autoridade e desejo de compra." },
+        ads: { title: "Alavancagem de Tráfego", desc: "Gestão profissional de campanhas em Meta e Google para maximizar o lucro, não só cliques." },
+        analysis: { title: "Dashboard de Performance", desc: "Acompanhamento em tempo real e reuniões mensais de alinhamento com especialistas seniores." },
       }
     },
     faq: {
@@ -67,18 +73,12 @@ export const translations: Record<Language, TranslationSchema> = {
       supportBody: "Nossa equipe de consultores está disponível no WhatsApp para responder questões específicas do seu nicho.",
       supportCta: "Falar com Consultor",
       items: [
-        { question: "O Plano Base é indicado para qualquer tipo de empresa?", answer: "O Plano Base é indicado para empresas que já validaram seu modelo de negócio e estão em fase de consolidação digital, mas ainda não possuem uma equipe interna de marketing. Não é um plano para negócios em estágio inicial ou que buscam apenas postagens pontuais." },
-        { question: "Esse plano é apenas gestão de redes sociais?", answer: "Não. O Plano Base vai além da gestão de redes sociais. Ele inclui diagnóstico estratégico, planejamento de pauta, produção, publicação e análise mensal, formando um sistema contínuo de posicionamento e crescimento digital, e não apenas execução de conteúdo." },
-        { question: "Em quais canais os conteúdos são publicados?", answer: "Os conteúdos são publicados no Instagram e Facebook, conforme definido no planejamento mensal. Outros canais podem ser avaliados em propostas específicas ou planos complementares." },
-        { question: "Quem cria os temas e ideias dos conteúdos?", answer: "A TAG08 propõe os temas e diretrizes estratégicas, e o cliente pode contribuir com sugestões e informações do negócio. O planejamento final é sempre validado em conjunto antes do início da produção." },
-        { question: "Os vídeos precisam ser gravados pela TAG08?", answer: "Não necessariamente. Os vídeos podem ser gravados pela TAG08 ou fornecidos pelo cliente, desde que sigam os direcionamentos definidos no planejamento para garantir qualidade e coerência com a estratégia." },
-        { question: "Como funciona o acompanhamento dos resultados?", answer: "Mensalmente, realizamos uma reunião de acompanhamento e entregamos um relatório com análises de engajamento, permitindo compreender o desempenho dos conteúdos e ajustar o direcionamento estratégico quando necessário." },
-        { question: "Existe contrato de fidelidade?", answer: "Não. O Plano Base não possui fidelidade contratual. Caso o cliente decida cancelar, é necessário apenas um aviso prévio de 30 dias." },
-        { question: "Posso contratar conteúdos ou serviços extras?", answer: "Sim. Quando houver necessidade, é possível contratar conteúdos extras ou serviços complementares, de forma avulsa, sem alterar o formato do Plano Base." },
-        { question: "O Plano Base garante resultados específicos?", answer: "Não trabalhamos com promessas irreais. O Plano Base oferece estrutura, método, constância e clareza estratégica. Resultados dependem de mercado, produto, engajamento e participação do cliente." },
-        { question: "O que é esperado do cliente durante o plano?", answer: "Para o bom andamento, o cliente deve: Fornecer materiais nos prazos, indicar um ponto focal para aprovações e participar das reuniões mensais de alinhamento. Isso garante fluidez e qualidade." },
-        { question: "Em quanto tempo começo a ver os conteúdos no ar?", answer: "Após a aprovação do planejamento, iniciamos a produção. Todo mês, um novo ciclo começa no dia 15, garantindo previsibilidade e organização do calendário." },
-        { question: "Esse plano pode evoluir conforme meu negócio cresce?", answer: "Sim. O Plano Base foi pensado como porta de entrada para soluções escaláveis. À medida que o negócio evolui, novas estratégias, formatos e serviços podem ser incorporados." }
+        { question: "O Plano Base é indicado para qualquer tipo de empresa?", answer: "Não. O Plano Base é exclusivo para empresas que buscam consistência estratégica e já validaram seu produto/serviço. Não atendemos negócios instáveis ou que buscam apenas postagens avulsas sem compromisso com o processo." },
+        { question: "Vocês garantem retorno imediato ou viralização?", answer: "Não trabalhamos com fórmulas mágicas. Oferecemos um sistema de crescimento sólido e previsível. Resultados reais surgem da disciplina estratégica e do respeito ao ciclo de maturidade do marketing." },
+        { question: "Quem toma as decisões criativas?", answer: "A TAG08 atua como seu departamento de marketing estratégico. Valorizamos sua escuta, mas decisões técnicas são baseadas em dados e heurísticas de conversão. Buscamos parceiros que confiem na nossa direção profissional." },
+        { question: "Esse plano é apenas gestão de redes sociais?", answer: "Não. É uma infraestrutura de marketing. Além das redes, ele integra diagnóstico, inteligência de tráfego e análise de dados para transformar sua presença digital em um canal de faturamento." },
+        { question: "Como funciona a dinâmica de ajustes e retrabalho?", answer: "Trabalhamos com um fluxo organizado de aprovações. O cliente ideal participa ativamente na validação estratégica inicial, o que reduz drasticamente o retrabalho e foca a energia na escala de resultados." },
+        { question: "Existe contrato de fidelidade?", answer: "Não possuímos fidelidade contratual forçada. Nossa retenção é baseada em performance e transparência. Se você acredita que o marketing é um gasto e não um investimento ativo, provavelmente não teremos o alinhamento necessário para a parceria." }
       ]
     },
     cta: {
@@ -230,6 +230,12 @@ export const translations: Record<Language, TranslationSchema> = {
     }
   },
   en: {
+    nicheHeadlines: {
+      'real-estate': "Highlight your properties.",
+      'health': "Strengthen your clinic.",
+      'tech': "Scale your Startup.",
+      'generic': "Sell more."
+    },
     hero: {
       badge: "Studio Base Plan",
       title: "Sell more.",
@@ -457,6 +463,12 @@ export const translations: Record<Language, TranslationSchema> = {
     }
   },
   es: {
+    nicheHeadlines: {
+      'real-estate': "Destaque sus inmuebles.",
+      'health': "Fortalezca su clínica.",
+      'tech': "Escala tu Startup.",
+      'generic': "Venda más."
+    },
     hero: {
       badge: "Plan Base Studio",
       title: "Venda más.",
@@ -684,6 +696,12 @@ export const translations: Record<Language, TranslationSchema> = {
     }
   },
   fr: {
+    nicheHeadlines: {
+      'real-estate': "Mettez en avant vos biens.",
+      'health': "Renforcez votre clinique.",
+      'tech': "Escalez votre Startup.",
+      'generic': "Vendez plus."
+    },
     hero: {
       badge: "Plan de Base Studio",
       title: "Vendez plus.",

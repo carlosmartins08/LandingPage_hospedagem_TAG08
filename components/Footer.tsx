@@ -85,46 +85,48 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="border-t border-white/5 bg-black/50 py-24 px-4 relative z-10 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 relative">
-          <span className="blueprint-label -top-8 left-0">FOOTER_ARCHITECTURE: GRID_12</span>
+      <div className="border-t border-white/5 bg-black/40 py-20 px-6 relative z-10 backdrop-blur-md">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 relative">
+          <span className="blueprint-label -top-8 left-0 text-[8px]">FOOTER_ARCHITECTURE: GRID_12_OPTIMIZED</span>
 
-          <div className="lg:col-span-4 space-y-10 reveal relative">
-            <span className="blueprint-label -top-4 left-0">BRAND_RECAP</span>
-            <BrandLogo className="text-4xl text-white" color="white" />
-            <p className="text-slate-400 leading-relaxed text-base font-medium max-w-sm">
+          {/* Column 1: Brand & Contact */}
+          <div className="lg:col-span-4 space-y-12 reveal relative">
+            <span className="blueprint-label -top-4 left-0">BRAND_SECTION</span>
+            <div className="group transition-transform duration-500 hover:scale-[1.02] origin-left cursor-pointer">
+              <BrandLogo className="text-4xl text-white" color="white" />
+            </div>
+            <p className="text-slate-400 leading-relaxed text-sm font-medium max-w-sm">
               {t.footer.about}
             </p>
 
-            <div className="space-y-6 pt-4">
-              <div className="flex items-start gap-5 group relative">
-                <span className="blueprint-label -left-12 top-0 rotate-90 origin-left">LOC_SCHEMA</span>
-                <div className="bg-white/5 p-3 rounded-2xl group-hover:bg-brand-lime group-hover:text-brand-black transition-all duration-500 shadow-lg">
-                  <MapPin size={22} />
+            <div className="space-y-8 pt-4">
+              <div className="flex items-start gap-4 group relative">
+                <div className="bg-white/5 p-3 rounded-xl group-hover:bg-brand-lime group-hover:text-brand-black transition-all duration-500 shadow-xl border border-white/5 group-hover:border-brand-lime">
+                  <MapPin size={20} />
                 </div>
-                <div>
-                  <span className="block text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] mb-2 font-mono">Escritório</span>
+                <div className="flex flex-col">
+                  <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] mb-1 font-mono">Headquarters</span>
                   <address className="not-italic">
                     <a
                       href="https://www.google.com/search?q=TAG08+-+Marketing+e+Consultoria"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white font-bold leading-relaxed text-sm hover:text-brand-lime transition-colors"
+                      className="text-white font-bold leading-snug text-sm hover:text-brand-lime transition-colors"
                     >
-                      R. Cassimiro de Abreu, Nº60<br />
-                      Sala 05 - Brisamar<br />
-                      João Pessoa - PB, 58033-330
+                      R. Cassimiro de Abreu, 60<br />
+                      Sala 05 • Brisamar<br />
+                      João Pessoa - PB
                     </a>
                   </address>
                 </div>
               </div>
 
-              <div className="flex items-center gap-5 group">
-                <div className="bg-white/5 p-3 rounded-2xl group-hover:bg-brand-lime group-hover:text-brand-black transition-all duration-500 shadow-lg">
-                  <Mail size={22} />
+              <div className="flex items-center gap-4 group">
+                <div className="bg-white/5 p-3 rounded-xl group-hover:bg-brand-lime group-hover:text-brand-black transition-all duration-500 shadow-xl border border-white/5 group-hover:border-brand-lime">
+                  <Mail size={20} />
                 </div>
-                <div>
-                  <span className="block text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] mb-2 font-mono">Email</span>
+                <div className="flex flex-col">
+                  <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] mb-1 font-mono">Central Support</span>
                   <a
                     href="mailto:contato@tag08.com.br"
                     className="text-white font-bold hover:text-brand-lime transition-colors text-sm"
@@ -136,66 +138,62 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-3 space-y-8 lg:pl-12 reveal stagger-1 relative">
-            <span className="blueprint-label -top-4 left-12">STRATEGIC_MAP</span>
-            <h4 className="text-white font-black uppercase tracking-widest italic text-lg">{t.footer.ecosystem}</h4>
-            <ul className="space-y-5 text-slate-400">
-              <li>
-                <a
-                  href="https://tag08.com.br/"
-                  className="hover:text-brand-lime transition-all flex items-center gap-4 group font-bold text-sm"
-                >
-                  <span className="w-2 h-2 bg-slate-700 rounded-full group-hover:bg-brand-lime transition-colors"></span>
-                  Desenvolvimento e Estratégia Digital
-                </a>
-              </li>
-              <li>
-                <div className="text-white font-black flex items-center gap-4 text-sm italic">
-                  <span className="w-2 h-2 bg-brand-lime rounded-full animate-pulse shadow-[0_0_8px_rgba(212,255,0,0.5)]"></span>
-                  Process Intelligence
-                </div>
-              </li>
-              <li>
-                <a
-                  href="https://tag08.com.br/growth"
-                  className="hover:text-brand-lime transition-all flex items-center gap-4 group font-bold text-sm"
-                >
-                  <span className="w-2 h-2 bg-slate-700 rounded-full group-hover:bg-brand-lime transition-colors"></span>
-                  Growth & Marketing
-                </a>
-              </li>
+          {/* Column 2: Ecosystem */}
+          <div className="lg:col-span-3 lg:pl-8 space-y-8 reveal stagger-1 relative">
+            <h4 className="text-white font-black uppercase tracking-widest italic text-base border-l-2 border-brand-lime pl-4">{t.footer.ecosystem}</h4>
+            <ul className="space-y-4">
+              {[
+                { label: 'Digital Strategy', href: 'https://tag08.com.br/' },
+                { label: 'Process Intelligence', href: null, active: true },
+                { label: 'Growth Marketing', href: 'https://tag08.com.br/growth' }
+              ].map((item, idx) => (
+                <li key={idx}>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      className="text-slate-400 hover:text-brand-lime transition-all flex items-center gap-3 group font-bold text-[13px] uppercase tracking-wider"
+                    >
+                      <ArrowUpRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all text-brand-lime" />
+                      {item.label}
+                    </a>
+                  ) : (
+                    <div className="text-white font-black flex items-center gap-3 text-[13px] italic bg-white/5 py-2 px-3 rounded-lg w-fit border border-white/10">
+                      <span className="w-1.5 h-1.5 bg-brand-lime rounded-full animate-pulse shadow-[0_0_8px_rgba(212,255,0,1)]"></span>
+                      {item.label}
+                    </div>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Column 3: Institutional */}
           <div className="lg:col-span-2 space-y-8 reveal stagger-2">
-            <h4 className="text-white font-black uppercase tracking-widest italic text-lg">{t.footer.institutional}</h4>
-            <ul className="space-y-5 text-slate-400 font-bold text-sm">
-              <li>
-                <button
-                  type="button"
-                  onClick={() => setPrivacyModalOpen(true)}
-                  className="hover:text-brand-lime transition-all"
-                >
-                  {t.footer.privacy}
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => setCookieModalOpen(true)}
-                  className="hover:text-brand-lime transition-all"
-                >
-                  {t.footer.cookies}
-                </button>
-              </li>
+            <h4 className="text-white font-black uppercase tracking-widest italic text-base">{t.footer.institutional}</h4>
+            <ul className="space-y-4">
+              {[
+                { label: t.footer.privacy, action: () => setPrivacyModalOpen(true) },
+                { label: t.footer.cookies, action: () => setCookieModalOpen(true) },
+                { label: t.footer.preferences, action: handleResetCookies }
+              ].map((item, idx) => (
+                <li key={idx}>
+                  <button
+                    type="button"
+                    onClick={item.action}
+                    className="text-slate-400 hover:text-brand-lime transition-all font-bold text-[13px] uppercase tracking-wider text-left"
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Column 4: Social */}
           <div className="lg:col-span-3 space-y-8 reveal stagger-3 relative">
-            <span className="blueprint-label -top-4 left-0">SOCIAL_CHANNELS</span>
-            <h4 className="text-white font-black uppercase tracking-widest italic text-lg">{t.footer.social}</h4>
-            <div className="flex gap-4 flex-wrap">
-              {socialLinks.slice(0, 3).map((link) => {
+            <h4 className="text-white font-black uppercase tracking-widest italic text-base">{t.footer.social}</h4>
+            <div className="grid grid-cols-4 gap-3">
+              {socialLinks.map((link) => {
                 const Icon = link.icon;
                 return (
                   <a
@@ -203,30 +201,38 @@ const Footer: React.FC = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white/5 hover:bg-brand-lime hover:text-brand-black p-4 rounded-2xl transition-all group border border-white/5 hover:border-brand-lime shadow-lg"
+                    className="bg-white/5 hover:bg-brand-lime hover:text-brand-black p-3.5 rounded-xl transition-all group border border-white/5 hover:border-brand-lime shadow-lg flex items-center justify-center aspect-square"
+                    title={link.label}
                   >
-                    <Icon size={22} />
+                    <Icon size={20} />
                   </a>
                 );
               })}
+            </div>
+            <div className="pt-4 p-4 rounded-2xl bg-brand-lime/5 border border-brand-lime/10">
+              <p className="text-[11px] text-slate-400 font-medium leading-relaxed italic">
+                {t.footer.socialDesc}
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-black py-10 px-4 border-t border-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-10 text-[10px] font-mono uppercase tracking-[0.4em] text-slate-500 text-center md:text-left">
-            <span>© {new Date().getFullYear()} {t.footer.rights}.</span>
-            <div className="w-1 h-1 bg-white/10 rounded-full hidden md:block"></div>
+      <div className="bg-black py-8 px-6 border-t border-white/5 relative z-10">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-8">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-[9px] font-mono uppercase tracking-[0.4em] text-slate-500 text-center sm:text-left">
+            <span>© {new Date().getFullYear()} {t.footer.rights}</span>
+            <span className="hidden sm:block text-white/10">|</span>
             <span>{t.footer.allRights}</span>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center gap-6 text-[10px] text-slate-500 uppercase tracking-[0.4em] font-mono text-center md:text-left relative group">
-            <span className="blueprint-label -top-6 right-0 opacity-0 group-hover:opacity-100 italic transition-all">SVR_RESP: 24MS</span>
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-[9px] text-slate-500 uppercase tracking-[0.4em] font-mono text-center sm:text-left relative group">
+            <span className="blueprint-label -top-6 right-0 opacity-0 group-hover:opacity-100 italic transition-all pointer-events-none">NODE_SVR_PROD: LATEST</span>
             <span>CNPJ: 43.140.403/0001-37</span>
-            <div className="w-1.5 h-1.5 bg-brand-lime rounded-full hidden md:block animate-pulse"></div>
-            <span>João Pessoa • Brasil</span>
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 bg-brand-lime rounded-full animate-pulse shadow-[0_0_8px_rgba(212,255,0,0.5)]"></div>
+              <span>JOÃO PESSOA • BRAZIL</span>
+            </div>
           </div>
         </div>
       </div>
