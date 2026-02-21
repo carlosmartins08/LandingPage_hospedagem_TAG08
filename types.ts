@@ -207,6 +207,9 @@ export interface TranslationSchema {
     ctaDirection: string;
     about: string;
     ecosystem: string;
+    aboutTag08: string;
+    blog: string;
+    sebraetec: string;
     institutional: string;
     social: string;
     socialDesc: string;

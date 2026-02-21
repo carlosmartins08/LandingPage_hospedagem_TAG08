@@ -1,4 +1,3 @@
-
 import { Language, TranslationSchema } from './types';
 
 export const translations: Record<Language, TranslationSchema> = {
@@ -201,6 +200,9 @@ export const translations: Record<Language, TranslationSchema> = {
       ctaDirection: "FALAR COM A DIREÇÃO",
       about: "Consultoria especializada em alavancagem de negócios. Substituímos o 'achismo' por dados e o caos por processos validados.",
       ecosystem: "Ecossistema TAG08",
+      aboutTag08: "Sobre a TAG08",
+      blog: "Blog Estratégico",
+      sebraetec: "Sebraetec",
       institutional: "Institucional",
       social: "Redes Sociais",
       socialDesc: "Acompanhe os bastidores das consultorias e insights diários de gestão.",
@@ -435,6 +437,9 @@ export const translations: Record<Language, TranslationSchema> = {
       ctaDirection: "TALK TO DIRECTION",
       about: "Specialized consulting in business leverage. We replace 'guesswork' with data and chaos with validated processes.",
       ecosystem: "TAG08 Ecosystem",
+      aboutTag08: "About TAG08",
+      blog: "Strategic Blog",
+      sebraetec: "Sebraetec",
       institutional: "Institutional",
       social: "Social Media",
       socialDesc: "Follow the backstage of consulting and daily management insights.",
@@ -669,6 +674,9 @@ export const translations: Record<Language, TranslationSchema> = {
       ctaDirection: "HABLAR CON LA DIRECCIÓN",
       about: "Consultoría especializada en apalancamiento de negocios. Reemplazamos las 'conjeturas' con datos y el caos con procesos validados.",
       ecosystem: "Ecosistema TAG08",
+      aboutTag08: "Sobre TAG08",
+      blog: "Blog Estratégico",
+      sebraetec: "Sebraetec",
       institutional: "Institucional",
       social: "Redes Sociales",
       socialDesc: "Siga el backstage de las consultorías e insights diarios de gestión.",
@@ -903,6 +911,9 @@ export const translations: Record<Language, TranslationSchema> = {
       ctaDirection: "PARLER À LA DIRECTION",
       about: "Conseil spécialisé en levier commercial. Nous remplaçons les 'conjectures' par des données et le chaos par des processus validés.",
       ecosystem: "Écosystème TAG08",
+      aboutTag08: "À propos de TAG08",
+      blog: "Blog Stratégique",
+      sebraetec: "Sebraetec",
       institutional: "Institutionnel",
       social: "Réseaux Sociaux",
       socialDesc: "Suivez les coulisses du conseil et les insights quotidiens sur la gestion.",

@@ -138,26 +138,29 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Column 2: Ecosystem */}
           <div className="lg:col-span-3 lg:pl-8 space-y-8 reveal stagger-1 relative">
             <h4 className="text-white font-black uppercase tracking-widest italic text-base border-l-2 border-brand-lime pl-4">{t.footer.ecosystem}</h4>
             <ul className="space-y-4">
               {[
-                { label: 'Digital Strategy', href: 'https://tag08.com.br/' },
+                { label: 'TAG08 Digital Strategy', href: 'https://tag08.com.br/' },
+                { label: t.footer.aboutTag08, href: 'https://tag08.com.br/sobre-a-tag08/' },
+                { label: t.footer.blog, href: 'https://tag08.com.br/blog/' },
+                { label: t.footer.sebraetec, href: 'https://tag08.com.br/sebraetec-impulsionando-empreendedores/' },
                 { label: 'Process Intelligence', href: null, active: true },
-                { label: 'Growth Marketing', href: 'https://tag08.com.br/growth' }
               ].map((item, idx) => (
                 <li key={idx}>
                   {item.href ? (
                     <a
                       href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-slate-400 hover:text-brand-lime transition-all flex items-center gap-3 group font-bold text-[13px] uppercase tracking-wider"
                     >
                       <ArrowUpRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all text-brand-lime" />
                       {item.label}
                     </a>
                   ) : (
-                    <div className="text-white font-black flex items-center gap-3 text-[13px] italic bg-white/5 py-2 px-3 rounded-lg w-fit border border-white/10">
+                    <div className="text-white font-black flex items-center gap-3 text-[13px] italic bg-white/5 py-2 px-3 rounded-lg w-fit border border-white/10 mt-2">
                       <span className="w-1.5 h-1.5 bg-brand-lime rounded-full animate-pulse shadow-[0_0_8px_rgba(212,255,0,1)]"></span>
                       {item.label}
                     </div>
