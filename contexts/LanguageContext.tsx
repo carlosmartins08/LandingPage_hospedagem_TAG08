@@ -24,8 +24,9 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// IDs do Google (Analytics e Ads)
+// IDs do Google (Analytics, Tag e Ads)
 const GA_TRACKING_ID = 'G-ZJ9SRM27Y9';
+const GOOGLE_TAG_ID = 'GT-WRDDR3R';
 const GOOGLE_ADS_ID = 'AW-823454219';
 
 export const LanguageProvider: React.FC<{ children?: React.ReactNode, initialLanguage?: Language }> = ({ children, initialLanguage }) => {
@@ -54,7 +55,10 @@ export const LanguageProvider: React.FC<{ children?: React.ReactNode, initialLan
     const hasScript = !!doc.getElementById('ga-script');
 
     const configLines: string[] = [];
-    if (analytical) configLines.push(`gtag('config', '${GA_TRACKING_ID}', { 'anonymize_ip': true });`);
+    if (analytical) {
+      configLines.push(`gtag('config', '${GA_TRACKING_ID}', { 'anonymize_ip': true });`);
+      configLines.push(`gtag('config', '${GOOGLE_TAG_ID}');`);
+    }
     if (marketing) configLines.push(`gtag('config', '${GOOGLE_ADS_ID}');`);
 
     if (!hasScript) {
@@ -80,6 +84,7 @@ export const LanguageProvider: React.FC<{ children?: React.ReactNode, initialLan
       if (gtagFn) {
         if (analytical) {
           gtagFn('config', GA_TRACKING_ID, { 'anonymize_ip': true });
+          gtagFn('config', GOOGLE_TAG_ID);
         }
         if (marketing) {
           gtagFn('config', GOOGLE_ADS_ID);

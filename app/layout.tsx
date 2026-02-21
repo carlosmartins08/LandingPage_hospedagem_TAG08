@@ -4,6 +4,7 @@ import './globals.css';
 import { Providers } from './providers';
 import CustomCursor from '../components/CustomCursor';
 import StructuredData from '../components/StructuredData';
+import { SITE_CONFIG } from '../constants';
 
 const darkerGrotesque = Darker_Grotesque({
   subsets: ['latin'],
@@ -26,8 +27,19 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'TAG08 Studio | Marketing Estrategico & Design de Elite',
-  description: 'Consultoria estrategica de marketing focada em escala e consolidacao de marcas premium.',
+  title: 'TAG08 Studio | Marketing Estratégico & Design de Elite',
+  description: 'Consultoria estratégica de marketing focada em escala e consolidação de marcas premium.',
+  alternates: {
+    canonical: SITE_CONFIG.domain,
+  },
+  openGraph: {
+    title: 'TAG08 Studio | Marketing Estratégico & Design de Elite',
+    description: 'Consultoria estratégica de marketing focada em escala e consolidação de marcas premium.',
+    url: SITE_CONFIG.domain,
+    siteName: 'TAG08 Studio',
+    locale: 'pt_BR',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

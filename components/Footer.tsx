@@ -49,43 +49,7 @@ const Footer: React.FC = () => {
       <meta itemProp="logo" content="https://socialmedia.tag08.com.br/logo.png" />
       <meta itemProp="legalName" content="TAG08 STUDIO CREATIONS LTDA" />
 
-      <div className="py-24 px-4 relative z-10">
-        <div className="max-w-5xl mx-auto text-center space-y-8 reveal relative">
-          <span className="blueprint-label -top-8 left-1/2 -translate-x-1/2">CONVERSION_FINAL: CTA_BLOCK</span>
-          <div className="inline-flex items-center gap-2 text-brand-lime bg-brand-lime/5 border border-brand-lime/20 px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold mx-auto relative">
-            <ShieldCheck size={12} />
-            {t.footer.badge}
-            <span className="blueprint-label -right-16 top-0">SSL_ENCRYPTED</span>
-          </div>
-          <h2 className="font-display text-4xl md:text-6xl font-black leading-[0.9] tracking-tighter uppercase italic">
-            {t.footer.title} <br />
-            <span className="text-brand-lime">{t.footer.titleAccent}</span>
-          </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto font-medium leading-relaxed">
-            {t.footer.description}
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-6 pt-12 relative">
-            <span className="blueprint-label -top-4 right-0">ACTION_TYPE: REDIRECT</span>
-            <Button
-              className="px-10 py-5 text-sm uppercase tracking-widest italic font-black shadow-xl"
-              onClick={() => window.open('https://wa.me/message/XURZIJ762YMVB1', '_blank')}
-            >
-              {t.footer.ctaDiagnosis}
-              <ArrowUpRight className="ml-3 w-5 h-5" />
-            </Button>
-            <Button
-              variant="outline"
-              className="px-10 py-5 text-sm uppercase tracking-widest italic font-black border-white/10 hover:border-brand-lime hover:text-brand-lime transition-all"
-              onClick={() => window.open('https://tag08.com.br/contato', '_blank')}
-            >
-              {t.footer.ctaDirection}
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      <div className="border-t border-white/5 bg-black/40 py-20 px-6 relative z-10 backdrop-blur-md">
+      <div className="pt-20 px-6 relative z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 relative">
           <span className="blueprint-label -top-8 left-0 text-[8px]">FOOTER_ARCHITECTURE: GRID_12_OPTIMIZED</span>
 
@@ -205,7 +169,7 @@ const Footer: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white/5 hover:bg-brand-lime hover:text-brand-black p-3.5 rounded-xl transition-all group border border-white/5 hover:border-brand-lime shadow-lg flex items-center justify-center aspect-square"
-                    title={link.label}
+                    aria-label={link.label}
                   >
                     <Icon size={20} />
                   </a>
