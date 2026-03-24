@@ -123,33 +123,47 @@ const HostingOnboarding = () => {
             </button>
 
             <div className="p-8 lg:p-12 grid lg:grid-cols-12 gap-8 items-start">
-              <div className="lg:col-span-5 lg:pr-6">
+              <div className="lg:col-span-12">
+                <div className="mb-6 flex items-center justify-between text-[10px] font-black uppercase tracking-[0.3em] text-white/50">
+                  <span>Etapa 1 de 1</span>
+                  <span className="text-brand-lime">Onboarding rápido</span>
+                </div>
+                <div className="h-1.5 w-full rounded-full bg-white/10 overflow-hidden">
+                  <div className="h-full w-full bg-brand-lime"></div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-4 lg:pr-6">
                 <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full border border-white/10 bg-white/5 text-brand-lime text-[10px] font-black uppercase tracking-[0.3em]">
                   Onboarding rápido
                 </div>
                 <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter uppercase italic text-white">
                   Comece seu onboarding em 2 minutos
                 </h2>
-                <p className="mt-4 text-lg text-slate-400 leading-relaxed max-w-md">
+                <p className="mt-4 text-base text-slate-400 leading-relaxed max-w-sm">
                   Preencha os dados essenciais e fale direto com um especialista.
                 </p>
-                <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] font-black uppercase tracking-[0.3em] text-white/70">
-                  Plano escolhido:
-                  <span className="text-brand-lime">{selectedPlan || 'Não informado'}</span>
-                </div>
-                {requirementsText && (
-                  <p className="mt-4 text-xs text-white/60 uppercase tracking-[0.3em] font-black">
-                    Necessidades: <span className="text-brand-lime">{requirementsText}</span>
-                  </p>
-                )}
                 <p className="mt-6 text-xs text-white/50 uppercase tracking-[0.3em] font-black">
                   Infraestrutura Web TAG08
                 </p>
               </div>
 
-              <div className="lg:col-span-7 lg:pl-8 lg:border-l lg:border-white/10">
+              <div className="lg:col-span-8 lg:pl-8 lg:border-l lg:border-white/10">
                 <form ref={formRef} onSubmit={handleSubmit} className="grid gap-5">
-                  <div className="grid md:grid-cols-2 gap-5">
+                  <div className="flex flex-wrap gap-2">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] font-black uppercase tracking-[0.3em] text-white/70">
+                      Plano escolhido:
+                      <span className="text-brand-lime">{selectedPlan || 'Não informado'}</span>
+                    </span>
+                    {requirementsText && (
+                      <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] font-black uppercase tracking-[0.3em] text-white/70">
+                        Necessidades:
+                        <span className="text-brand-lime">{requirementsText}</span>
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="grid gap-5">
                     <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-white/60 font-black">
                       Nome
                       <input
@@ -173,9 +187,6 @@ const HostingOnboarding = () => {
                         className="w-full rounded-2xl border border-white/10 bg-brand-black/60 px-4 py-3 text-sm font-semibold text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-brand-lime"
                       />
                     </label>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-5">
                     <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-white/60 font-black">
                       Site
                       <input
@@ -209,16 +220,16 @@ const HostingOnboarding = () => {
                     </label>
                   </div>
 
-                  <div className="mt-2 flex flex-col lg:flex-row gap-4 items-start lg:items-center lg:justify-between">
+                  <div className="mt-2 grid gap-3">
                     <Magnetic>
                       <button
                         type="submit"
-                        className="btn-magnetic inline-flex items-center justify-center px-10 py-4 bg-brand-lime text-brand-black rounded-full font-black text-sm uppercase tracking-widest hover:shadow-[0_0_30px_rgba(212,255,0,0.45)] transition-all"
+                        className="btn-magnetic w-full inline-flex items-center justify-center px-10 py-4 bg-brand-lime text-brand-black rounded-full font-black text-sm uppercase tracking-widest hover:shadow-[0_0_30px_rgba(212,255,0,0.45)] transition-all"
                       >
                         Iniciar onboarding no WhatsApp
                       </button>
                     </Magnetic>
-                    <span className="text-[10px] text-white/50 font-medium uppercase tracking-[0.3em] max-w-xs">
+                    <span className="text-[10px] text-white/50 font-medium uppercase tracking-[0.3em]">
                       Ao enviar, você concorda com a Política de Privacidade.
                     </span>
                   </div>
