@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Magnetic from './Magnetic';
+import OnboardingLink from './OnboardingLink';
 
 const HostingHero = () => {
   return (
@@ -41,12 +42,11 @@ const HostingHero = () => {
                   Ver planos
                 </a>
               </Magnetic>
-              <a
-                href="#onboarding"
+              <OnboardingLink
                 className="inline-flex items-center justify-center px-10 py-4 border border-white/30 text-white rounded-full font-black text-sm uppercase tracking-widest hover:border-brand-lime hover:text-brand-lime transition-all"
               >
                 Falar com especialista
-              </a>
+              </OnboardingLink>
             </div>
           </div>
 

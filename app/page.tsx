@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar';
 import HostingHero from '../components/HostingHero';
 import HostingPain from '../components/HostingPain';
 import HostingPositioning from '../components/HostingPositioning';
+import HostingVsMaintenance from '../components/HostingVsMaintenance';
 import HostingPlans from '../components/HostingPlans';
 import HostingOnboarding from '../components/HostingOnboarding';
 import HostingSecurity from '../components/HostingSecurity';
@@ -48,6 +49,7 @@ export default function Home() {
         <HostingHero />
         <HostingPain />
         <HostingPositioning />
+        <HostingVsMaintenance />
         <HostingPlans />
         <HostingOnboarding />
         <HostingSecurity />

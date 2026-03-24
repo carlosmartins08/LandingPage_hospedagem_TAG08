@@ -1,4 +1,5 @@
 import Magnetic from './Magnetic';
+import OnboardingLink from './OnboardingLink';
 
 const HostingFinalCTA = () => {
   return (
@@ -15,12 +16,11 @@ const HostingFinalCTA = () => {
           </div>
           <div className="lg:col-span-4 flex lg:justify-end">
             <Magnetic>
-              <a
-                href="#onboarding"
+              <OnboardingLink
                 className="btn-magnetic inline-flex items-center justify-center px-10 py-4 bg-brand-lime text-brand-black rounded-full font-black text-sm uppercase tracking-widest hover:shadow-[0_0_30px_rgba(212,255,0,0.45)] transition-all"
               >
                 Falar com especialista TAG08
-              </a>
+              </OnboardingLink>
             </Magnetic>
           </div>
         </div>
