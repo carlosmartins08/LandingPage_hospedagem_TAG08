@@ -24,10 +24,10 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// IDs do Google (Analytics, Tag e Ads)
-const GA_TRACKING_ID = 'G-ZJ9SRM27Y9';
-const GOOGLE_TAG_ID = 'GT-WRDDR3R';
-const GOOGLE_ADS_ID = 'AW-823454219';
+// IDs do Google (Analytics, Tag e Ads) vindos de env vars públicas
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
+const GOOGLE_TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID;
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 
 export const LanguageProvider: React.FC<{ children?: React.ReactNode, initialLanguage?: Language }> = ({ children, initialLanguage }) => {
   const [language, setLanguageState] = useState<Language>(initialLanguage || 'pt');
@@ -51,21 +51,43 @@ export const LanguageProvider: React.FC<{ children?: React.ReactNode, initialLan
 
     if (typeof window === 'undefined') return;
 
+    const primaryId = GA_TRACKING_ID || GOOGLE_ADS_ID;
+    if (!primaryId) {
+      console.warn('[Analytics] Nenhum ID do Google configurado. Defina NEXT_PUBLIC_GA_TRACKING_ID ou NEXT_PUBLIC_GOOGLE_ADS_ID.');
+      return;
+    }
+
     const doc = window.document;
     const hasScript = !!doc.getElementById('ga-script');
 
     const configLines: string[] = [];
     if (analytical) {
-      configLines.push(`gtag('config', '${GA_TRACKING_ID}', { 'anonymize_ip': true });`);
-      configLines.push(`gtag('config', '${GOOGLE_TAG_ID}');`);
+      if (GA_TRACKING_ID) {
+        configLines.push(`gtag('config', '${GA_TRACKING_ID}', { 'anonymize_ip': true });`);
+      } else {
+        console.warn('[Analytics] Consentimento analítico dado, mas NEXT_PUBLIC_GA_TRACKING_ID está ausente.');
+      }
+
+      if (GOOGLE_TAG_ID) {
+        configLines.push(`gtag('config', '${GOOGLE_TAG_ID}');`);
+      }
     }
-    if (marketing) configLines.push(`gtag('config', '${GOOGLE_ADS_ID}');`);
+
+    if (marketing) {
+      if (GOOGLE_ADS_ID) {
+        configLines.push(`gtag('config', '${GOOGLE_ADS_ID}');`);
+      } else {
+        console.warn('[Ads] Consentimento de marketing dado, mas NEXT_PUBLIC_GOOGLE_ADS_ID está ausente.');
+      }
+    }
+
+    if (configLines.length === 0) return;
 
     if (!hasScript) {
       const script = doc.createElement('script');
       script.id = 'ga-script';
       script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${primaryId}`;
       doc.head.appendChild(script);
 
       const inlineScript = doc.createElement('script');
@@ -82,11 +104,13 @@ export const LanguageProvider: React.FC<{ children?: React.ReactNode, initialLan
     } else {
       const gtagFn = (window as typeof globalThis & { gtag?: CallableFunction }).gtag;
       if (gtagFn) {
-        if (analytical) {
+        if (analytical && GA_TRACKING_ID) {
           gtagFn('config', GA_TRACKING_ID, { 'anonymize_ip': true });
+        }
+        if (analytical && GOOGLE_TAG_ID) {
           gtagFn('config', GOOGLE_TAG_ID);
         }
-        if (marketing) {
+        if (marketing && GOOGLE_ADS_ID) {
           gtagFn('config', GOOGLE_ADS_ID);
         }
       }

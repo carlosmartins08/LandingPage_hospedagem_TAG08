@@ -3,13 +3,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Icons } from '../constants';
-import { useTranslation } from '../contexts/LanguageContext';
 import { useUX } from '../contexts/UXContext';
 import Magnetic from './Magnetic';
 
 const Navbar: React.FC = () => {
-  const { t, language } = useTranslation();
-  const { setStrategyNote, isBlueprintMode, toggleBlueprintMode } = useUX();
+  const { toggleBlueprintMode } = useUX();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +17,7 @@ const Navbar: React.FC = () => {
   // Script para ativação secreta do Blueprint (3 cliques no logo)
   const [logoClicks, setLogoClicks] = useState(0);
 
-  const handleLogoClick = (e: React.MouseEvent) => {
+  const handleLogoClick = () => {
     // Evita o redirecionamento imediato para podermos processar os múltiplos cliques
     setLogoClicks(prev => {
       const next = prev + 1;
@@ -35,10 +33,10 @@ const Navbar: React.FC = () => {
   };
 
   const navItems = [
-    { label: t.navbar.menu.problem, href: '#problema', id: 'problema' },
-    { label: t.navbar.menu.solution, href: '#solucao', id: 'solucao' },
-    { label: t.navbar.menu.plan, href: '#pilares', id: 'pilares' },
-    { label: t.navbar.menu.cycle, href: '#ciclo', id: 'ciclo' },
+    { label: 'Dor', href: '#dor', id: 'dor' },
+    { label: 'Infraestrutura', href: '#infraestrutura', id: 'infraestrutura' },
+    { label: 'Planos', href: '#planos', id: 'planos' },
+    { label: 'Segurança', href: '#seguranca', id: 'seguranca' },
   ];
 
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -53,7 +51,7 @@ const Navbar: React.FC = () => {
 
         setIsScrolled(window.scrollY > 50);
 
-        const sections = ['problema', 'solucao', 'pilares', 'ciclo'];
+        const sections = ['dor', 'infraestrutura', 'planos', 'seguranca'];
         const current = sections.find(section => {
           const el = document.getElementById(section);
           if (el) {
@@ -70,7 +68,7 @@ const Navbar: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [t]);
+  }, []);
 
   const handleMenuScroll = () => {
     if (menuRef.current) {
@@ -99,11 +97,9 @@ const Navbar: React.FC = () => {
       >
         <div className="flex items-center gap-3 mr-auto group cursor-pointer" onClick={handleLogoClick}>
           <Link
-            href={`/${language}`}
+            href="/"
             className="flex items-center gap-3"
             aria-label="Voltar ao início"
-            onMouseEnter={() => setStrategyNote(t.strategyNotes.hero)}
-            onMouseLeave={() => setStrategyNote(null)}
           >
             <div className={`${isScrolled ? 'scale-75' : 'scale-100'} transition-transform duration-300 relative`}>
               <Icons.LogoIcon />
@@ -145,11 +141,9 @@ const Navbar: React.FC = () => {
         <Magnetic>
           <Link
             href="#contato"
-            onMouseEnter={() => setStrategyNote(t.strategyNotes.metrics)}
-            onMouseLeave={() => setStrategyNote(null)}
             className={`hidden sm:flex items-center gap-2 px-5 py-2.5 bg-brand-lime text-brand-black rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all`}
           >
-            {t.navbar.diagnosis} <span className="hidden lg:inline">{t.navbar.free}</span>
+            Falar com especialista
           </Link>
         </Magnetic>
 
@@ -215,7 +209,7 @@ const Navbar: React.FC = () => {
               onClick={() => setIsMenuOpen(false)}
               className="inline-flex items-center justify-center py-6 px-12 bg-brand-lime text-brand-black font-black text-xl rounded-2xl uppercase italic tracking-tighter"
             >
-              {t.cta.button}
+              Falar com especialista
             </Link>
           </div>
         </nav>

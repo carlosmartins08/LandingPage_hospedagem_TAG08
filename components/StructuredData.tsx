@@ -3,8 +3,8 @@ import Script from 'next/script';
 export default function StructuredData() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'MarketingAgency',
-    name: 'TAG08 - Marketing e Consultoria',
+    '@type': 'Organization',
+    name: 'TAG08 - Infraestrutura Web',
     image: 'https://tag08.com.br/logo.png',
     '@id': 'https://tag08.com.br',
     url: 'https://tag08.com.br',
