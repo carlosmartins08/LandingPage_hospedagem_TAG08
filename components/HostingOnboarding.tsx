@@ -124,7 +124,7 @@ const HostingOnboarding = () => {
 
             <div className="p-8 lg:p-12 grid lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-12">
-                <div className="mb-6 flex items-center justify-between text-[10px] font-black uppercase tracking-[0.3em] text-white/50">
+                <div className="mb-6 flex items-center justify-between text-[10px] font-black uppercase tracking-[0.3em] text-white/60">
                   <span>Etapa 1 de 1</span>
                   <span className="text-brand-lime">Onboarding rápido</span>
                 </div>
@@ -140,7 +140,7 @@ const HostingOnboarding = () => {
                 <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter uppercase italic text-white">
                   Comece seu onboarding em 2 minutos
                 </h2>
-                <p className="mt-4 text-base text-slate-400 leading-relaxed max-w-sm">
+                <p className="mt-4 text-base text-slate-300 leading-relaxed max-w-sm">
                   Preencha os dados essenciais e fale direto com um especialista.
                 </p>
                 <p className="mt-6 text-xs text-white/50 uppercase tracking-[0.3em] font-black">
@@ -164,7 +164,7 @@ const HostingOnboarding = () => {
                   </div>
 
                   <div className="grid gap-5">
-                    <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-white/60 font-black">
+                    <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-white/70 font-black">
                       Nome
                       <input
                         name="name"
@@ -172,11 +172,11 @@ const HostingOnboarding = () => {
                         onChange={handleChange}
                         required
                         placeholder="Seu nome completo"
-                        className="w-full rounded-2xl border border-white/10 bg-brand-black/60 px-4 py-3 text-sm font-semibold text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-brand-lime"
+                        className="w-full rounded-2xl border border-white/15 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-brand-lime"
                       />
                     </label>
 
-                    <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-white/60 font-black">
+                    <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-white/70 font-black">
                       Empresa
                       <input
                         name="company"
@@ -184,10 +184,10 @@ const HostingOnboarding = () => {
                         onChange={handleChange}
                         required
                         placeholder="Nome da empresa"
-                        className="w-full rounded-2xl border border-white/10 bg-brand-black/60 px-4 py-3 text-sm font-semibold text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-brand-lime"
+                        className="w-full rounded-2xl border border-white/15 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-brand-lime"
                       />
                     </label>
-                    <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-white/60 font-black">
+                    <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-white/70 font-black">
                       Site
                       <input
                         name="site"
@@ -195,18 +195,18 @@ const HostingOnboarding = () => {
                         onChange={handleChange}
                         required
                         placeholder="www.seusite.com.br"
-                        className="w-full rounded-2xl border border-white/10 bg-brand-black/60 px-4 py-3 text-sm font-semibold text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-brand-lime"
+                        className="w-full rounded-2xl border border-white/15 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-brand-lime"
                       />
                     </label>
 
-                    <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-white/60 font-black">
+                    <label className="flex flex-col gap-2 text-xs uppercase tracking-[0.3em] text-white/70 font-black">
                       Objetivo principal
                       <select
                         name="goal"
                         value={formData.goal}
                         onChange={handleSelectChange}
                         required
-                        className="w-full rounded-2xl border border-white/10 bg-brand-black/60 px-4 py-3 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-brand-lime"
+                        className="w-full rounded-2xl border border-white/15 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-brand-lime"
                       >
                         <option value="" disabled>
                           Selecione uma opção
