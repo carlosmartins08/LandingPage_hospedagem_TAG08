@@ -3,6 +3,7 @@ import HostingHero from '../components/HostingHero';
 import HostingPain from '../components/HostingPain';
 import HostingPositioning from '../components/HostingPositioning';
 import HostingPlans from '../components/HostingPlans';
+import HostingOnboarding from '../components/HostingOnboarding';
 import HostingSecurity from '../components/HostingSecurity';
 import HostingDifferentials from '../components/HostingDifferentials';
 import HostingRules from '../components/HostingRules';
@@ -48,6 +49,7 @@ export default function Home() {
         <HostingPain />
         <HostingPositioning />
         <HostingPlans />
+        <HostingOnboarding />
         <HostingSecurity />
         <HostingDifferentials />
         <HostingRules />

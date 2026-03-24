@@ -3,7 +3,7 @@ import { Icons } from '../constants';
 const painPoints = [
   'site fora do ar',
   'lentidão na navegação',
-  'erro em formulário ou contato',
+  'erro em formulário de contato',
   'problemas com e-mail',
   'ataques ou invasões',
 ];
@@ -18,7 +18,7 @@ const HostingPain = () => {
               Quebra de padrão
             </div>
             <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter uppercase italic">
-              Se o seu site parar, você perde cliente.
+              Se o seu site parar, você perde clientes.
             </h2>
           </div>
 

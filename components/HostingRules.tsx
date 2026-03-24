@@ -1,9 +1,9 @@
 const rules = [
   'Cada plano possui limites de recursos definidos (sites, espaço e contas)',
   'O uso deve respeitar a capacidade contratada',
-  'Recursos adicionais podem ser contratados conforme necessidade',
+  'Recursos adicionais podem ser contratados conforme a necessidade',
   'O ambiente é otimizado para aplicações web (especialmente WordPress)',
-  'Não é permitido uso para atividades que comprometam a estabilidade do servidor',
+  'Não é permitido o uso para atividades que comprometam a estabilidade do servidor',
 ];
 
 const HostingRules = () => {

@@ -28,15 +28,15 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'TAG08 | Infraestrutura Web Segura',
-  description: 'Hospedagem, segurança e estabilidade em um ambiente pensado para empresas que precisam que o site funcione — de verdade.',
+  description: 'Hospedagem, segurança e estabilidade em um ambiente pensado para empresas que precisam do site funcionando — de verdade.',
   alternates: {
     canonical: SITE_CONFIG.domain,
   },
   openGraph: {
     title: 'TAG08 | Infraestrutura Web Segura',
-    description: 'Hospedagem, segurança e estabilidade em um ambiente pensado para empresas que precisam que o site funcione — de verdade.',
+    description: 'Hospedagem, segurança e estabilidade em um ambiente pensado para empresas que precisam do site funcionando — de verdade.',
     url: SITE_CONFIG.domain,
-    siteName: 'TAG08 Studio',
+    siteName: 'TAG08 Hospedagem',
     locale: 'pt_BR',
     type: 'website',
   },

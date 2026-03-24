@@ -1,13 +1,14 @@
 import Script from 'next/script';
+import { SITE_CONFIG } from '../constants';
 
 export default function StructuredData() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'TAG08 - Infraestrutura Web',
-    image: 'https://tag08.com.br/logo.png',
-    '@id': 'https://tag08.com.br',
-    url: 'https://tag08.com.br',
+    image: `${SITE_CONFIG.domain}/logo.png`,
+    '@id': SITE_CONFIG.domain,
+    url: SITE_CONFIG.domain,
     telephone: '+5583999999999',
     address: {
       '@type': 'PostalAddress',

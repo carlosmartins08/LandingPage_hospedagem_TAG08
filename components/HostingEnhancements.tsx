@@ -1,7 +1,7 @@
 import { Icons } from '../constants';
 
 const enhancements = [
-  'um print de painel',
+  'um print do painel',
   'um depoimento',
   'um exemplo de cliente',
   'tempo de uptime',
@@ -39,8 +39,8 @@ const HostingEnhancements = () => {
             </ul>
           </div>
 
-          <div className="p-8 rounded-3xl border border-brand-lime/30 bg-brand-lime/10">
-            <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full border border-brand-lime/40 bg-brand-lime/20 text-brand-black text-[10px] font-black uppercase tracking-[0.3em]">
+          <div className="p-8 rounded-3xl border border-brand-lime/60 bg-brand-lime text-brand-black shadow-[0_0_45px_rgba(212,255,0,0.25)]">
+            <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full border border-brand-black/20 bg-brand-black/10 text-brand-black text-[10px] font-black uppercase tracking-[0.3em]">
               Veredito
             </div>
             <h3 className="mt-6 text-2xl sm:text-3xl font-black tracking-tighter uppercase italic text-brand-black">
@@ -48,7 +48,7 @@ const HostingEnhancements = () => {
             </h3>
             <ul className="mt-6 space-y-4">
               {verdict.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-brand-black">
+                <li key={item} className="flex items-start gap-3 text-sm text-brand-black/90">
                   <span className="mt-1 text-brand-black">
                     <Icons.Check />
                   </span>

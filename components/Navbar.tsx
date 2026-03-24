@@ -140,7 +140,7 @@ const Navbar: React.FC = () => {
 
         <Magnetic>
           <Link
-            href="#contato"
+            href="#onboarding"
             className={`hidden sm:flex items-center gap-2 px-5 py-2.5 bg-brand-lime text-brand-black rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all`}
           >
             Falar com especialista
@@ -205,7 +205,7 @@ const Navbar: React.FC = () => {
 
           <div className="mt-16">
             <Link
-              href="#contato"
+              href="#onboarding"
               onClick={() => setIsMenuOpen(false)}
               className="inline-flex items-center justify-center py-6 px-12 bg-brand-lime text-brand-black font-black text-xl rounded-2xl uppercase italic tracking-tighter"
             >

@@ -8,7 +8,7 @@ export const COLORS = {
 };
 
 export const SITE_CONFIG = {
-  domain: 'https://socialmedia.tag08.com.br',
+  domain: 'https://hospedagem.tag08.com.br',
   locales: ['pt', 'en', 'es', 'fr'],
   defaultLocale: 'pt',
 };

@@ -2,7 +2,7 @@ const transparencyItems = [
   'cobrança mensal',
   'cancelamento a qualquer momento',
   'sem taxas ocultas',
-  'possibilidade de upgrade de plano conforme crescimento',
+  'possibilidade de upgrade de plano conforme o crescimento',
 ];
 
 const HostingTransparency = () => {

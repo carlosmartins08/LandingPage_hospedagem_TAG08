@@ -45,8 +45,8 @@ const Footer: React.FC = () => {
       onMouseLeave={() => setStrategyNote(null)}
     >
       <meta itemProp="name" content="TAG08 Studio Creations" />
-      <meta itemProp="url" content="https://socialmedia.tag08.com.br" />
-      <meta itemProp="logo" content="https://socialmedia.tag08.com.br/logo.png" />
+      <meta itemProp="url" content="https://hospedagem.tag08.com.br" />
+      <meta itemProp="logo" content="https://hospedagem.tag08.com.br/logo.png" />
       <meta itemProp="legalName" content="TAG08 STUDIO CREATIONS LTDA" />
 
       <div className="pt-20 px-6 relative z-10">
@@ -208,4 +208,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-

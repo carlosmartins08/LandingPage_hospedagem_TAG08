@@ -25,7 +25,7 @@ const HostingHero = () => {
             </h1>
 
             <p className="reveal stagger-3 mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-2xl font-medium">
-              Hospedagem, segurança e estabilidade em um ambiente pensado para empresas que precisam que o site funcione — de verdade.
+              Hospedagem, segurança e estabilidade em um ambiente pensado para empresas que precisam do site funcionando — de verdade.
             </p>
 
             <p className="reveal stagger-3 mt-4 text-base text-white/70 leading-relaxed max-w-2xl">
@@ -42,7 +42,7 @@ const HostingHero = () => {
                 </a>
               </Magnetic>
               <a
-                href="#contato"
+                href="#onboarding"
                 className="inline-flex items-center justify-center px-10 py-4 border border-white/30 text-white rounded-full font-black text-sm uppercase tracking-widest hover:border-brand-lime hover:text-brand-lime transition-all"
               >
                 Falar com especialista

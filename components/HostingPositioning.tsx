@@ -20,7 +20,7 @@ const HostingPositioning = () => {
             Por que a Infraestrutura TAG08 é diferente
           </h2>
           <p className="mt-4 text-lg text-slate-400 leading-relaxed">
-            Nós não vendemos espaço em servidor. Criamos um ambiente estruturado para que o seu site funcione com estabilidade, segurança e previsibilidade.
+            Nós não vendemos espaço em servidor. Criamos um ambiente estruturado para que seu site funcione com estabilidade, segurança e previsibilidade.
           </p>
         </div>
 
