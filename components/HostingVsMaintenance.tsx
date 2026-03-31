@@ -68,15 +68,15 @@ const HostingVsMaintenance = () => {
             </p>
           </div>
 
-          <div className="p-8 rounded-3xl border border-amber-400/40 bg-amber-400/10">
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-amber-300">Manutenção</span>
+          <div className="p-8 rounded-3xl border border-brand-accent/40 bg-brand-accent/10">
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-accent">Manutenção</span>
             <p className="mt-4 text-base text-white/80 leading-relaxed">
               A manutenção é o cuidado contínuo com o funcionamento do site.
             </p>
             <ul className="mt-6 space-y-3">
               {maintenanceItems.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-white/80">
-                  <span className="mt-1 text-amber-300">
+                  <span className="mt-1 text-brand-accent">
                     <Icons.Check />
                   </span>
                   <span className="font-medium uppercase tracking-wide">{item}</span>

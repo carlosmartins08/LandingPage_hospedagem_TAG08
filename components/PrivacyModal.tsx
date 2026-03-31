@@ -68,7 +68,7 @@ const PrivacyModal: React.FC = () => {
 
         <div className="mt-12 pt-8 border-t border-white/10 flex justify-between items-center gap-4">
           <p className="text-[10px] font-black text-white/30 uppercase tracking-[0.2em]">
-            Last Update: 2024.12
+            Last Update: 2026.03
           </p>
           <button 
             onClick={() => setPrivacyModalOpen(false)}

@@ -53,7 +53,7 @@ export function Providers({ children }: { children?: React.ReactNode }) {
   }, []);
 
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLanguage="pt">
       <UXProvider>
         <BlueprintWrapper>
           {children}

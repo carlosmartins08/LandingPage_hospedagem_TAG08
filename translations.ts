@@ -91,30 +91,30 @@ export const translations: Record<Language, TranslationSchema> = {
       urgency: "Vagas limitadas para novos parceiros este mês",
     },
     cookie: {
-      title: "Privacidade & Dados",
-      desc: "Utilizamos cookies para otimizar sua experiência e analisar nosso tráfego.",
+      title: "Privacidade e Cookies",
+      desc: "Usamos cookies essenciais para o site funcionar e, com sua permissão, cookies analíticos e de marketing.",
       accept: "Aceitar",
-      policy: "Política de Privacidade",
+      policy: "Política de Cookies",
     },
     privacy: {
       title: "Política de Privacidade",
       close: "Fechar",
-      intro: "A TAG08 Studio respeita sua privacidade e se compromete a proteger seus dados pessoais.",
+      intro: "A TAG08 Hospedagem respeita sua privacidade e protege seus dados com rigor.",
       sections: {
-        data: { title: "Coleta de Dados", text: "Coletamos informações básicas de contato (nome, e-mail, telefone) apenas quando você inicia voluntariamente uma consultoria ou contato via WhatsApp." },
-        cookies: { title: "Uso de Cookies", text: "Utilizamos cookies técnicos para garantir o funcionamento do site e cookies analíticos (Google Analytics) para entender como melhorar nossa entrega de conteúdo." },
-        rights: { title: "Seus Direitos", text: "Você tem o direito de acessar, corrigir ou solicitar a exclusão de seus dados a qualquer momento, conforme previsto na LGPD." },
-        security: { title: "Segurança", text: "Implementamos protocolos de criptografia e acesso restrito para garantir que suas informações estratégicas nunca sejam compartilhadas com terceiros sem autorização." }
+        data: { title: "Coleta de Dados", text: "Coletamos informações de contato apenas quando você inicia o onboarding ou fala com a equipe via WhatsApp." },
+        cookies: { title: "Uso de Cookies", text: "Usamos cookies essenciais para funcionamento e, com consentimento, cookies analíticos e de marketing para melhorar a experiência." },
+        rights: { title: "Seus Direitos", text: "Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento, conforme previsto na LGPD." },
+        security: { title: "Segurança", text: "Adotamos práticas de segurança e acesso restrito para proteger suas informações." }
       }
     },
     cookiePolicy: {
       title: "Política de Cookies",
-      intro: "Esta política explica como a TAG08 utiliza cookies para melhorar sua navegação e análise de performance.",
+      intro: "Esta política explica como a TAG08 Hospedagem utiliza cookies para melhorar sua navegação e análise de performance.",
       sections: {
-        necessary: { title: "Cookies Necessários", text: "Essenciais para o funcionamento básico do site, como navegação em páginas e acesso a áreas seguras. O site não pode funcionar corretamente sem eles." },
-        analytical: { title: "Cookies de Desempenho", text: "Ajudam-nos a entender como os visitantes interagem com o site, coletando e reportando informações de forma anônima via Google Analytics." },
-        marketing: { title: "Cookies de Marketing", text: "Utilizados para rastrear visitantes em sites. A intenção é exibir anúncios relevantes e envolventes para o usuário individual." },
-        management: { title: "Gestão de Preferências", text: "Você pode gerenciar ou desativar cookies através das configurações do seu navegador a qualquer momento. Note que a desativação pode afetar sua experiência no site." }
+        necessary: { title: "Cookies Necessários", text: "Essenciais para o funcionamento básico do site, como navegação e acesso a áreas seguras. O site não funciona corretamente sem eles." },
+        analytical: { title: "Cookies Analíticos", text: "Ajudam a entender como os visitantes interagem com o site, coletando informações de forma anônima (ex.: Google Analytics)." },
+        marketing: { title: "Cookies de Marketing", text: "Usados para medir campanhas e oferecer comunicações mais relevantes conforme seu consentimento." },
+        management: { title: "Gestão de Preferências", text: "Você pode gerenciar ou desativar cookies nas configurações do navegador. A desativação pode afetar sua experiência." }
       }
     },
     monthlyCycle: {
@@ -192,25 +192,25 @@ export const translations: Record<Language, TranslationSchema> = {
       ]
     },
     footer: {
-      badge: "Consultoria de Elite",
-      title: "Sua empresa pronta para o",
-      titleAccent: "próximo nível de maturidade.",
-      description: "A TAG08 une estratégia de negócios, engenharia de processos e tecnologia para transformar o caos operacional em máquinas de crescimento.",
-      ctaDiagnosis: "AGENDAR DIAGNÓSTICO",
-      ctaDirection: "FALAR COM A DIREÇÃO",
-      about: "Consultoria especializada em alavancagem de negócios. Substituímos o 'achismo' por dados e o caos por processos validados.",
+      badge: "Infraestrutura Web",
+      title: "Seu site pronto para",
+      titleAccent: "operar sem falhas.",
+      description: "Infraestrutura segura, estável e gerenciada para empresas que precisam do site funcionando de verdade.",
+      ctaDiagnosis: "FALAR COM ESPECIALISTA",
+      ctaDirection: "SUPORTE PRIORITÁRIO",
+      about: "Hospedagem e infraestrutura web com foco em estabilidade, segurança e performance contínua.",
       ecosystem: "Ecossistema TAG08",
       aboutTag08: "Sobre a TAG08",
-      blog: "Blog Estratégico",
+      blog: "Blog TAG08",
       sebraetec: "Sebraetec",
       institutional: "Institucional",
       social: "Redes Sociais",
-      socialDesc: "Acompanhe os bastidores das consultorias e insights diários de gestão.",
-      rights: "TAG08 Estratégia Digital",
+      socialDesc: "Acompanhe novidades sobre hospedagem, segurança e performance.",
+      rights: "TAG08 Hospedagem",
       allRights: "Todos os direitos reservados.",
-      privacy: "Privacidade",
+      privacy: "Política de Privacidade",
       cookies: "Política de Cookies",
-      preferences: "Preferências de Privacidade"
+      preferences: "Revisar Preferências"
     },
     growthRoadmap: {
       title: "O Caminho para o",
@@ -224,12 +224,12 @@ export const translations: Record<Language, TranslationSchema> = {
       }
     },
     strategyNotes: {
-      hero: "Engenharia visual focada em reduzir esforço cognitivo do lead ideal.",
-      metrics: "Otimização baseada em heurísticas de usabilidade e conversão real.",
-      roadmap: "Filtro de LTV 360: Atraindo quem investe e repelindo quem gasta.",
-      roi: "Identificação de falhas estruturais causadas por marketing amador.",
-      design: "Grid de elite: A estética como primeira barreira de autoridade.",
-      blueprint: "Strategic Transparency: Mostrando as camadas invisíveis do método."
+      hero: "Infraestrutura projetada para alta disponibilidade.",
+      metrics: "Estabilidade contínua com monitoramento e previsibilidade.",
+      roadmap: "Evolução do ambiente conforme o crescimento do negócio.",
+      roi: "Redução de custos causados por falhas e indisponibilidade.",
+      design: "Experiência premium focada em confiança.",
+      blueprint: "Transparência técnica: ambiente sob controle."
     }
   },
   en: {

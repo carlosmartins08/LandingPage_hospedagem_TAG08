@@ -7,6 +7,8 @@ const waLink = 'https://wa.me/message/XURZIJ762YMVB1';
 
 const HostingOnboarding = () => {
   const formRef = useRef<HTMLFormElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const previouslyFocused = useRef<HTMLElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState('');
   const [requirementsText, setRequirementsText] = useState('');
@@ -66,6 +68,43 @@ const HostingOnboarding = () => {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    previouslyFocused.current = document.activeElement as HTMLElement | null;
+
+    const focusableSelector =
+      'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+    const focusables = dialogRef.current?.querySelectorAll<HTMLElement>(focusableSelector) ?? [];
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+
+    if (first) first.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setIsOpen(false);
+        return;
+      }
+
+      if (event.key !== 'Tab' || focusables.length === 0) return;
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      previouslyFocused.current?.focus();
+    };
+  }, [isOpen]);
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -74,6 +113,18 @@ const HostingOnboarding = () => {
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const submitLead = async (payload: Record<string, unknown>) => {
+    try {
+      await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+    } catch (error) {
+      console.warn('Falha ao enviar lead para o endpoint interno.', error);
+    }
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -95,6 +146,17 @@ const HostingOnboarding = () => {
       selectedPlan === 'Sob consulta' ? 'Observação: necessidades acima dos planos padrão' : null,
     ].filter(Boolean).join('\n');
 
+    const leadPayload = {
+      ...formData,
+      selectedPlan: selectedPlan || null,
+      requirements: requirementsText || null,
+      source: 'landing-hospedagem',
+      timestamp: new Date().toISOString(),
+      locale: document.documentElement.lang || 'pt',
+    };
+
+    void submitLead(leadPayload);
+
     const url = `${waLink}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
   };
@@ -110,7 +172,9 @@ const HostingOnboarding = () => {
           <div
             role="dialog"
             aria-modal="true"
+            aria-labelledby="onboarding-title"
             className="relative w-full max-w-5xl rounded-3xl border border-white/10 bg-brand-black bg-noise shadow-2xl"
+            ref={dialogRef}
             onClick={(event) => event.stopPropagation()}
           >
             <button
@@ -137,7 +201,10 @@ const HostingOnboarding = () => {
                 <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full border border-white/10 bg-white/5 text-brand-lime text-[10px] font-black uppercase tracking-[0.3em]">
                   Onboarding rápido
                 </div>
-                <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter uppercase italic text-white">
+                <h2
+                  id="onboarding-title"
+                  className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter uppercase italic text-white"
+                >
                   Comece seu onboarding em 2 minutos
                 </h2>
                 <p className="mt-4 text-base text-slate-300 leading-relaxed max-w-sm">

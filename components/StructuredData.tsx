@@ -4,29 +4,44 @@ import { SITE_CONFIG } from '../constants';
 export default function StructuredData() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'TAG08 - Infraestrutura Web',
-    image: `${SITE_CONFIG.domain}/logo.png`,
-    '@id': SITE_CONFIG.domain,
-    url: SITE_CONFIG.domain,
-    telephone: '+5583999999999',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'BR',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: -7.11532,
-      longitude: -34.861,
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '15',
-    },
-    sameAs: [
-      'https://www.instagram.com/tag08.mkt',
-      'https://www.google.com/search?q=TAG08+-+Marketing+e+Consultoria',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        name: 'TAG08 - Infraestrutura Web',
+        image: `${SITE_CONFIG.domain}/logo.png`,
+        '@id': SITE_CONFIG.domain,
+        url: SITE_CONFIG.domain,
+        telephone: '+5583999999999',
+        address: {
+          '@type': 'PostalAddress',
+          addressCountry: 'BR',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: -7.11532,
+          longitude: -34.861,
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5.0',
+          reviewCount: '15',
+        },
+        sameAs: [
+          'https://www.instagram.com/tag08.mkt',
+          'https://www.google.com/search?q=TAG08+-+Marketing+e+Consultoria',
+        ],
+      },
+      {
+        '@type': 'Service',
+        name: 'Infraestrutura Web TAG08',
+        serviceType: 'Hospedagem e infraestrutura web',
+        provider: {
+          '@id': SITE_CONFIG.domain,
+        },
+        description:
+          'Hospedagem segura, estável e otimizada para empresas que precisam de performance e previsibilidade.',
+        areaServed: 'Worldwide',
+      }
     ],
   };
 

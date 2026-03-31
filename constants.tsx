@@ -4,7 +4,7 @@ import React from 'react';
 export const COLORS = {
   primary: '#000000',
   secondary: '#D4FF00', // Brand Lime
-  accent: '#F59E0B',
+  accent: '#DDF81D', // Brand Accent
 };
 
 export const SITE_CONFIG = {

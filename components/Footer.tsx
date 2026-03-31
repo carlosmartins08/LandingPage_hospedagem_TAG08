@@ -3,7 +3,6 @@
 import React from 'react';
 import { useTranslation } from '../contexts/LanguageContext';
 import { useUX } from '../contexts/UXContext';
-import Button from './Button';
 import BrandLogo from './BrandLogo';
 import {
   ArrowUpRight,

@@ -32,6 +32,16 @@ const CookieBanner: React.FC = () => {
     setIsVisible(false);
   };
 
+  const handleAcceptEssential = () => {
+    const essentialConsent: CookieConsent = {
+      necessary: true,
+      analytical: false,
+      marketing: false
+    };
+    updateCookieConsent(essentialConsent);
+    setIsVisible(false);
+  };
+
   const handleSavePreferences = () => {
     updateCookieConsent(tempConsent);
     setIsVisible(false);
@@ -57,6 +67,13 @@ const CookieBanner: React.FC = () => {
               <p className="text-slate-400 text-sm leading-relaxed font-medium">
                 Respeitamos sua privacidade. {t.cookie.desc} Você pode personalizar suas escolhas ou aceitar o uso padrão.
               </p>
+              <button
+                type="button"
+                onClick={() => setCookieModalOpen(true)}
+                className="mt-3 text-[10px] font-black uppercase tracking-widest text-brand-lime hover:text-white transition-colors"
+              >
+                {t.cookie.policy}
+              </button>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
               <button 
@@ -64,6 +81,12 @@ const CookieBanner: React.FC = () => {
                 className="px-6 py-4 bg-white/5 text-white font-black text-[10px] uppercase tracking-widest rounded-xl hover:bg-white/10 transition-all"
               >
                 Configurar
+              </button>
+              <button
+                onClick={handleAcceptEssential}
+                className="px-6 py-4 bg-white/5 text-white font-black text-[10px] uppercase tracking-widest rounded-xl hover:bg-white/10 transition-all"
+              >
+                Somente essenciais
               </button>
               <button 
                 onClick={handleAcceptAll}

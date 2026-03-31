@@ -74,6 +74,12 @@ const HostingPlans = () => {
   const [storage, setStorage] = useState(3);
   const [emails, setEmails] = useState(2);
 
+  const normalizeValue = (value: string, fallback: number) => {
+    const parsed = Number(value);
+    if (Number.isNaN(parsed)) return fallback;
+    return Math.max(1, Math.floor(parsed));
+  };
+
   const recommendation = useMemo(() => {
     const needs = { sites, storage, emails };
     const match = plans.find((plan) => {
@@ -158,9 +164,11 @@ const HostingPlans = () => {
               <input
                 type="number"
                 min={1}
+                step={1}
+                inputMode="numeric"
                 name="sites"
                 value={sites}
-                onChange={(event) => setSites(Number(event.target.value))}
+                onChange={(event) => setSites(normalizeValue(event.target.value, 1))}
                 required
                 className="w-full rounded-2xl border border-white/10 bg-brand-black/60 px-4 py-3 text-sm font-semibold text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-lime"
               />
@@ -171,9 +179,11 @@ const HostingPlans = () => {
               <input
                 type="number"
                 min={1}
+                step={1}
+                inputMode="numeric"
                 name="storage"
                 value={storage}
-                onChange={(event) => setStorage(Number(event.target.value))}
+                onChange={(event) => setStorage(normalizeValue(event.target.value, 3))}
                 required
                 className="w-full rounded-2xl border border-white/10 bg-brand-black/60 px-4 py-3 text-sm font-semibold text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-lime"
               />
@@ -184,9 +194,11 @@ const HostingPlans = () => {
               <input
                 type="number"
                 min={1}
+                step={1}
+                inputMode="numeric"
                 name="emails"
                 value={emails}
-                onChange={(event) => setEmails(Number(event.target.value))}
+                onChange={(event) => setEmails(normalizeValue(event.target.value, 2))}
                 required
                 className="w-full rounded-2xl border border-white/10 bg-brand-black/60 px-4 py-3 text-sm font-semibold text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-lime"
               />

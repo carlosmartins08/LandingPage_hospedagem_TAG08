@@ -51,7 +51,7 @@ export const LanguageProvider: React.FC<{ children?: React.ReactNode, initialLan
 
     if (typeof window === 'undefined') return;
 
-    const primaryId = GA_TRACKING_ID || GOOGLE_ADS_ID;
+    const primaryId = GA_TRACKING_ID || GOOGLE_TAG_ID || GOOGLE_ADS_ID;
     if (!primaryId) {
       console.warn('[Analytics] Nenhum ID do Google configurado. Defina NEXT_PUBLIC_GA_TRACKING_ID ou NEXT_PUBLIC_GOOGLE_ADS_ID.');
       return;
@@ -154,9 +154,8 @@ export const LanguageProvider: React.FC<{ children?: React.ReactNode, initialLan
   }, [initialLanguage]);
 
   const setLanguage = (lang: Language) => {
-    // With URL routing, we should probably redirect instead of just setting state
-    // But for now, we'll keep the state set so components can react immediately
-    // The LanguageSwitcher will handle the actual URL change
+    // With URL routing, we should probably redirect instead of just setting state.
+    // For now, keep state so components can react immediately.
     setLanguageState(lang);
     localStorage.setItem('tag08-lang', lang);
     document.documentElement.lang = lang;
